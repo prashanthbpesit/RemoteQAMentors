@@ -1,8 +1,10 @@
-<div id="top">
+<div id="top" >
 
 <div class="wrapper row1" id="htmlheader" style="position: fixed;top: 0;right: 0;left: 0;width: 100%;z-index: 1030;">
 <!-- header contents start here -->
+<div ng-include="'header.html'"></div>
 </div>
+<div ng-controller="HomeController">
 <div class="bgded overlay" style="background-image:url('images/demo/backgrounds/xyz2.jpg');">
   <div id="pageintro" class="hoc clear"> 
     <div style="max-width: 796px;
@@ -275,8 +277,10 @@
     <p class="fl_right">Template by <a target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
   </div>
 </div>
+</div>
 <div class="wrapper row0" id="htmlfooter" style="bottom: 0px; position: fixed;">
 <!-- footer contents start here -->
+<div ng-include="'footer.html'"></div>
 </div>
 <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
 <!-- JAVASCRIPTS -->

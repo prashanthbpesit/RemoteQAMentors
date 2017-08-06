@@ -1,72 +1,10 @@
-<!DOCTYPE html>
-<html lang="">
-<head>
-<title>Remote QA Mentors</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
-<link href="layout/styles/Toggle.css" rel="stylesheet" type="text/css" media="all">
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body id="top">
-<!-- <div class="wrapper row0">
-  <div id="topbar" class="hoc clear"> 
-    <div class="fl_left">
-      <ul class="nospace">
-        <li><i class="fa fa-phone"></i> +00 (123) 456 7890</li>
-        <li><i class="fa fa-envelope-o"></i> info@domain.com</li>
-      </ul>
-    </div> 
-    <div class="fl_right">
-      <ul class="nospace">
-        <li><a href="#"><i class="fa fa-lg fa-home"></i></a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Login</a></li>
-        <li><a href="#">Register</a></li>
-      </ul>
-    </div>
-  </div>
-</div> -->
-<div>
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">WebSiteName</a>
-    </div>
-    <ul class="nav navbar-nav" style="float:right;">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Page 1</a></li>
-      <li><a href="#">Page 2</a></li>
-      <li><a href="#">Page 3</a></li>
-    </ul>
-  </div>
-</nav>
+<div id="top">
 
+<div class="wrapper row1" id="htmlheader" style="position: fixed;top: 0;right: 0;left: 0;width: 100%;z-index: 1030;">
+<!-- header contents start here -->
+<div ng-include="'header.html'"></div>
 </div>
-<div class="row" style="position: fixed;top: 0;right: 0;left: 0;width: 100%;">
-<div class=""> </div>
-<header>
-    <nav id="mainav" class="navbar navbar-default">
-      <div id="logo" class="fl_left" style="float: left;">
-      <h1><img src="images/demo/backgrounds/logo123.jpg" alt="logo" /></h1>
-    </div>
-    <div class="navigation" style="float: right;">
-      <ul id="box">
-        <li class="active"><a href="index.html">Home<span style="border-bottom: 20 px; border-bottom-color: orange;"> </span></a></li>
-		<li><a  href="#">About Us</a> </li>
-        <li><a  href="#">Free Lancing Course</a> </li>
-        <li><a  href="#">Live Web Training</a> </li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Contact Us</a></li>
-         <li><a href="#">Request For Demo</a></li>
-      </ul>
-       </div>
-    </nav>
-   </header>
-</div>
+<div ng-controller="EarningDisclaimerController">
 <div class="bgded overlay" style="background-image:url('images/demo/backgrounds/xyz2.jpg');">
   <div id="pageintro" class="hoc clear"> 
     <div style="max-width: 796px;
@@ -339,34 +277,11 @@
     <p class="fl_right">Template by <a target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
   </div>
 </div>
-<div class="wrapper row0" style="bottom: 0px; position: fixed;">
-  <div id="topbar" class="hoc clear"> 
-    <div class="fl_left" style="float: left;">
-      <ul class="navigation">
-        <li><i class="fa fa-phone"></i> +00 (123) 456 7890</li>
-        <li><i class="fa fa-envelope-o"></i> info@domain.com</li>
-      </ul>
-    </div> 
-    <div class="fl_right" style="float: right;">
-      <ul class="navigation">
-        <li><a href="#"><i class="fa fa-lg fa-home"></i></a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Contact Us</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">FAQ</a></li>
-        <li><a href="#">Earnings Disclaimer</a></li>
-     <!--    <li><a href="pages/login.html">Login</a></li>
-         <li><a href="pages/registration.html">Register</a></li> -->
-        <li><a href="pages/requestdemo.html">Request for Demo</a></li>
-      </ul>
-    </div>
-  </div>
+</div>
+<div class="wrapper row0" id="htmlfooter" style="bottom: 0px; position: fixed;">
+<!-- footer contents start here -->
+<div ng-include="'footer.html'"></div>
 </div>
 <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
 <!-- JAVASCRIPTS -->
-<script src="layout/scripts/jquery.min.js"></script>
-<script src="layout/scripts/jquery.backtotop.js"></script>
-<script src="layout/scripts/jquery.mobilemenu.js"></script>
-<script src="layout/scripts/jquery.flexslider-min.js"></script>
-</body>
-</html>
+</div>
