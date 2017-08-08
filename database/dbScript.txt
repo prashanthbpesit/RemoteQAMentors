@@ -1,0 +1,24 @@
+create table tbluserdetails(
+flduserid int(11) not null auto_increment primary key,
+fldusername varchar(256) null,
+fldpassword varchar(256) null,
+fldemail varchar(256) not null,
+fldphonenumber varchar(256) not null,
+fldfirstname varchar(256) null,
+fldlastname varchar(256) null,
+fldispaid int(1)  not null,
+fldtype int(1) not null,
+fldisdeleted int(1),
+fldTimeStamp timestamp default CURRENT_TIMESTAMP 
+);
+
+
+
+create table tbldemorequest(
+fldid int(11) not null auto_increment primary key,
+fldemail varchar(256) not null,
+fldphonenumber varchar(256) not null,
+fldfirstname varchar(256) null,
+fldlastname varchar(256) null,
+fldTimeStamp timestamp default CURRENT_TIMESTAMP 
+);
