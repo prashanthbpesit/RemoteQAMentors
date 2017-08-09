@@ -23,29 +23,31 @@
     <div class="content two_third"> 
       <h1>Request for a Demo</h1>
       <div id="comments">
-        <form action="#" method="post">
           <div class="one_third first">
-            <label for="name">Name <span>*</span></label>
-            <input type="text" name="name" id="name" value="" size="22" required>
+            <label for="name">First Name <span>*</span></label>
+            <input type="text" name="name" id="name" value="" size="22" ng-model="firstname" required>
           </div>
           <div class="one_third">
+            <label for="name">Last Name <span>*</span></label>
+            <input type="text" name="name" id="name" value="" size="22" ng-model="lastname" required>
+          </div>
+          <div class="one_third first">
             <label for="email">Mail <span>*</span></label>
-            <input type="email" name="email" id="email" value="" size="22" required>
+            <input type="email" name="email" id="email" value="" size="22" ng-model="email" required>
           </div>
           <div class="one_third">
-            <label for="url">Phone No.</label>
-            <input type="url" name="url" id="url" value="" size="22">
+            <label for="url">Phone No.<span>*</span>s</label>
+            <input type="url" name="url" id="url" value="" size="22" ng-model="phone" required >
           </div>
           <div class="block clear">
             <label for="comment">Your Comment</label>
-            <textarea name="comment" id="comment" cols="25" rows="10"></textarea>
+            <textarea name="comment" id="comment" cols="25" rows="10" ng-model="comments"></textarea>
           </div>
           <div>
-            <input type="submit" name="submit" value="Submit Form">
+            <input type="button" name="submit" ng-click="registerLogin()" value="Submit"/>
             &nbsp;
-            <input type="reset" name="reset" value="Reset Form">
+            <input type="button" name="reset" value="Reset Form">
           </div>
-        </form>
       </div>
     </div>
     <!-- / main body -->
