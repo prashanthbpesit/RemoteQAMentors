@@ -1,4 +1,4 @@
-mainApp.controller('FreeLancingController', function($scope) {
+mainApp.controller('FreeLancingController', function($scope, $http) {
 
 
 });

@@ -1,4 +1,4 @@
-mainApp.controller('RecordedWebController', function($scope) {
+mainApp.controller('RecordedWebController', function($scope, $http) {
 
 
 });

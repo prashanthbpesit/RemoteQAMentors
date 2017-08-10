@@ -1,4 +1,4 @@
-mainApp.controller('FAQController', function($scope) {
+mainApp.controller('FAQController', function($scope, $http) {
 
 
 });

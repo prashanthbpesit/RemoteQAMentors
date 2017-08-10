@@ -1,4 +1,4 @@
-mainApp.controller('HomeController', function($scope) {
+mainApp.controller('HomeController', function($scope, $http) {
 
 
 });

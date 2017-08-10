@@ -1,4 +1,4 @@
-mainApp.controller('ContactUsController', function($scope) {
+mainApp.controller('ContactUsController', function($scope, $http) {
 
 
 });

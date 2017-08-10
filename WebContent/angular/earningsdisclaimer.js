@@ -1,4 +1,4 @@
-mainApp.controller('EarningDisclaimerController', function($scope) {
+mainApp.controller('EarningDisclaimerController', function($scope, $http) {
 
 	
 });

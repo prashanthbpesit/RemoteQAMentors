@@ -23,47 +23,44 @@
     <div class="content two_third"> 
       <h1>Request for a Demo</h1>
       <div id="comments">
+      <form ng-submit="registerLogin()" method="post">
           <div class="one_third first">
-            <label for="name">First Name <span>*</span></label>
-            <input type="text" name="name" id="name" value="" size="22" ng-model="firstname" required>
+            <label>First Name <span>*</span></label>
+            <input type="text" name="name" id="name" value="" size="40" ng-model="firstname" required>
           </div>
           <div class="one_third">
-            <label for="name">Last Name <span>*</span></label>
-            <input type="text" name="name" id="name" value="" size="22" ng-model="lastname" required>
+            <label>Last Name <span>*</span></label>
+            <input type="text" name="name" id="name" value="" size="40" ng-model="lastname" required>
           </div>
           <div class="one_third first">
-            <label for="email">Mail <span>*</span></label>
-            <input type="email" name="email" id="email" value="" size="22" ng-model="email" required>
+            <label>Mail <span>*</span></label>
+            <input type="text" name="email" id="email" value="" size="40" ng-model="email" required>
           </div>
           <div class="one_third">
-            <label for="url">Phone No.<span>*</span>s</label>
-            <input type="url" name="url" id="url" value="" size="22" ng-model="phone" required >
+            <label >Phone No.<span>*</span></label>
+            <input type="text" name="phonenumber" id="phonenumber" value="" size="30" ng-model="phone" required >
           </div>
           <div class="block clear">
-            <label for="comment">Your Comment</label>
+            <label>Your Comment</label>
             <textarea name="comment" id="comment" cols="25" rows="10" ng-model="comments"></textarea>
           </div>
           <div>
-            <input type="button" name="submit" ng-click="registerLogin()" value="Submit"/>
+            <input type="submit" name="submit" value="Submit"/>
             &nbsp;
-            <input type="button" name="reset" value="Reset Form">
+            <input type="reset" name="reset" value="Reset Form">
           </div>
+          </form>
       </div>
     </div>
     <!-- / main body -->
     <div class="clear"></div>
   </main>
 </div>
-<div class="wrapper row5">
-  <div id="copyright" class="hoc clear"> 
-  <p>&nbsp;</p>
-  </div>
 </div>
-</div>
-<div class="wrapper row1" id="htmlfooter" style="bottom: 0px; position: fixed;">
-<!-- footer contents start here -->
+<!-- <div class="wrapper row1" id="htmlfooter" style="bottom: 0px; position: fixed;">
+footer contents start here
 <div ng-include="'footer.html'"></div>
-</div>
+</div> -->
 <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
 <!-- JAVASCRIPTS -->
 </div>

@@ -1,4 +1,4 @@
-mainApp.controller('DemoRequestController', function($scope) {
+mainApp.controller('DemoRequestController', function($scope,  $http) {
 $scope.registerLogin = function() {
 	try {
 		alert($scope.firstname+"====="+$scope.lastname+"======"+$scope.email+"===="+$scope.phone)

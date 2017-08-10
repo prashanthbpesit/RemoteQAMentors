@@ -1,4 +1,4 @@
-mainApp.controller('PrivacyPolicyController', function($scope) {
+mainApp.controller('PrivacyPolicyController', function($scope $http) {
 
 
 });

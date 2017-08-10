@@ -1,4 +1,4 @@
-mainApp.controller('BlogController', function($scope) {
+mainApp.controller('BlogController', function($scope,  $http) {
 
 
 });

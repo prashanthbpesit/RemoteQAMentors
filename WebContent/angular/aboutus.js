@@ -1,3 +1,3 @@
-mainApp.controller('AboutUsController', function($scope) {
+mainApp.controller('AboutUsController', function($scope,  $http) {
 	
 });
