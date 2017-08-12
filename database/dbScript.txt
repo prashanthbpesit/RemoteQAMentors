@@ -8,6 +8,8 @@ fldfirstname varchar(256) null,
 fldlastname varchar(256) null,
 fldispaid int(1)  not null,
 fldtype int(1) not null,
+fldusercomments varchar(5012) null,
+fldacceptorcomments varchar(5012) null,
 fldisdeleted int(1),
 fldTimeStamp timestamp default CURRENT_TIMESTAMP 
 );
@@ -20,5 +22,19 @@ fldemail varchar(256) not null,
 fldphonenumber varchar(256) not null,
 fldfirstname varchar(256) null,
 fldlastname varchar(256) null,
+fldusercomments varchar(5012) null,
+fldacceptorcomments varchar(5012) null,
+fldTimeStamp timestamp default CURRENT_TIMESTAMP 
+);
+
+
+create table tblsuggestion(
+fldid int(11) not null auto_increment primary key,
+fldemail varchar(256) not null,
+fldphonenumber varchar(256) not null,
+fldfirstname varchar(256) null,
+fldlastname varchar(256) null,
+fldusercomments varchar(5012) null,
+fldacceptorcomments varchar(5012) null,
 fldTimeStamp timestamp default CURRENT_TIMESTAMP 
 );
