@@ -27,8 +27,7 @@ public class TrainingServices {
 	@POST
 	@Path("/validateLogin")
 	@Produces(MediaType.APPLICATION_XML)
-	public String validateLogin(@QueryParam("username") String inUsername,
-			@QueryParam("password") String inPassword) {
+	public String validateLogin(@QueryParam("username") String inUsername, @QueryParam("password") String inPassword) {
 		UserPojo UserPojo = new UserPojo();
 		String gson = "";
 		try {
@@ -105,12 +104,31 @@ public class TrainingServices {
 	@Path("/demorequest")
 	@Produces(MediaType.APPLICATION_XML)
 	public String demorequest(@QueryParam("firstname") String inFirstName, @QueryParam("lastname") String inLastName,
-			@QueryParam("email") String inEmail, @QueryParam("phone") String inPhone) {
+			@QueryParam("usermail") String inEmail, @QueryParam("phone") String inPhone,
+			@QueryParam("usercomments") String inUserComments) {
 		String value = "";
 		try {
 			System.out.println(inFirstName + "======" + inLastName + "========" + inEmail + "===" + inPhone);
 			ToolManager ToolManager = new ToolManager();
-			value = ToolManager.demoRequest(inFirstName, inLastName, inEmail, inPhone);
+			value = ToolManager.demoRequest(inFirstName, inLastName, inEmail, inPhone, inUserComments);
+			ToolManager = null;
+		} catch (Exception Ex) {
+			Ex.printStackTrace();
+		} finally {
+			return value;
+		}
+	}
+
+	@POST
+	@Path("/addSuggestion")
+	@Produces(MediaType.APPLICATION_XML)
+	public String addSuggestion(@QueryParam("name") String inName, @QueryParam("usermail") String inEmail,
+			@QueryParam("phone") String inPhone, @QueryParam("usercomments") String inUserComments) {
+		String value = "";
+		try {
+			System.out.println("addSuggestion========="+inName +"========" + inEmail + "===" + inPhone);
+			ToolManager ToolManager = new ToolManager();
+			value = ToolManager.suggestion(inName, inEmail, inPhone, inUserComments);
 			ToolManager = null;
 		} catch (Exception Ex) {
 			Ex.printStackTrace();

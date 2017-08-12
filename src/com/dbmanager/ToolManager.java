@@ -11,6 +11,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
 import com.mapping.DemoRequest;
+import com.mapping.Suggestion;
 import com.mapping.Users;
 
 public class ToolManager {
@@ -207,15 +208,15 @@ public class ToolManager {
 	}
 
 	/**
-	 * To add details for request for demo
-	 * 
+	 *  To add details for request for demo
 	 * @param inFirstName
 	 * @param inLastName
 	 * @param inEmail
 	 * @param inPhone
+	 * @param ininUserComments
 	 * @return
 	 */
-	public String demoRequest(String inFirstName, String inLastName, String inEmail, String inPhone) {
+	public String demoRequest(String inFirstName, String inLastName, String inEmail, String inPhone, String ininUserComments) {
 		String ReturnValue = "";
 		SessionFactory SessionFactory = null;
 		Session session = null;
@@ -231,6 +232,7 @@ public class ToolManager {
 			DemoRequest.setLastname(inLastName);
 			DemoRequest.setEmail(inEmail);
 			DemoRequest.setPhonenumber(inPhone);
+			DemoRequest.setUsercomments(ininUserComments);
 			Integer UserId = (Integer) session.save(DemoRequest);
 			Val = new StringBuilder();
 			Val.append("Dear ").append(inFirstName).append(" ").append(inLastName)
@@ -256,6 +258,61 @@ public class ToolManager {
 			return ReturnValue;
 		}
 	}
+	/**
+	 * 
+	 * @param inFirstName
+	 * @param inLastName
+	 * @param inEmail
+	 * @param inPhone
+	 * @param ininUserComments
+	 * @return
+	 */
+	public String suggestion(String inName, String inEmail, String inPhone, String ininUserComments) {
+		String ReturnValue = "";
+		SessionFactory SessionFactory = null;
+		Session session = null;
+		Suggestion Suggestion = null;
+		Transaction Tx = null;
+		StringBuilder Val = null;
+		try {
+			SessionFactory = HibernateUtil.getSessionFactory();
+			session = SessionFactory.openSession();
+			Tx = session.beginTransaction();
+			Suggestion = new Suggestion();
+			Suggestion.setFirstname(inName);
+			Suggestion.setLastname("");
+			Suggestion.setEmail(inEmail);
+			Suggestion.setPhonenumber(inPhone);
+			Suggestion.setUsercomments(ininUserComments);
+			Integer UserId = (Integer) session.save(Suggestion);
+			Val = new StringBuilder();
+			Val.append("Dear ").append(inName)
+					.append(" thanks for suggesting us.");
+			ReturnValue = Val.toString();
+			Val = null;
+			Suggestion = null;
+			Tx.commit();
+			Tx = null;
+		} catch (Exception Ex) {
+			if (Tx != null) {
+				Tx.rollback();
+			}
+			ReturnValue = "Please try again.";
+			Ex.printStackTrace();
+		} finally {
+			if (session != null) {
+				session.flush();
+				session.close();
+			}
+			Tx = null;
+			session = null;
+			return ReturnValue;
+		}
+	}
+	/**
+	 * 
+	 * @return
+	 */
 
 	public static List<RequestPojo> getDemoRequest() {
 		String ReturnValue = "";

@@ -23,26 +23,26 @@
     <div class="content two_third"> 
       <h1>Request for a Demo</h1>
       <div id="comments">
-      <form ng-submit="registerLogin()" method="post">
+      <form ng-submit="registerLogin()">
           <div class="one_third first">
-            <label>First Name <span>*</span></label>
-            <input type="text" name="name" id="name" value="" size="40" ng-model="firstname" required>
+            <label for="firstname">First Name <span>*</span></label>
+            <input type="text" name="firstname" id="firstname" value="" size="40" ng-model="firstname" required>
           </div>
           <div class="one_third">
-            <label>Last Name <span>*</span></label>
-            <input type="text" name="name" id="name" value="" size="40" ng-model="lastname" required>
+            <label for="lastname">Last Name <span>*</span></label>
+            <input type="text" name="lastname" id="lastname" value="" size="40" ng-model="lastname" required>
           </div>
           <div class="one_third first">
-            <label>Mail <span>*</span></label>
-            <input type="text" name="email" id="email" value="" size="40" ng-model="email" required>
+            <label for="usermail">Mail <span>*</span></label>
+            <input type="email" name="usermail" id="usermail" value="" size="40" ng-model="usermail" required>
           </div>
           <div class="one_third">
-            <label >Phone No.<span>*</span></label>
-            <input type="text" name="phonenumber" id="phonenumber" value="" size="30" ng-model="phone" required >
+            <label for="phonenumber">Phone No.<span>*</span></label>
+            <input type="number" name="phonenumber" id="phonenumber" value="" size="30" ng-model="phone" required >
           </div>
           <div class="block clear">
-            <label>Your Comment</label>
-            <textarea name="comment" id="comment" cols="25" rows="10" ng-model="comments"></textarea>
+            <label for="comment">Your Expectations</label>
+            <textarea name="comment" id="comment" title="what do you expect on us" cols="25" rows="10" maxlength="2000" ng-model="usercomments"></textarea>
           </div>
           <div>
             <input type="submit" name="submit" value="Submit"/>

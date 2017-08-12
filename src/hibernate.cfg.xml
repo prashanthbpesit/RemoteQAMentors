@@ -12,5 +12,6 @@
    <property name="javax.persistence.validation.mode">none</property>
    <mapping class="com.mapping.Users"/>
    <mapping class="com.mapping.DemoRequest"/>
+   <mapping class="com.mapping.Suggestion"/>
 </session-factory>
 </hibernate-configuration>

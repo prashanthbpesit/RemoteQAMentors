@@ -7,6 +7,7 @@
 <div ng-controller="ContactUsController">
 
 <div class="wrapper row1" style="height: 100%">
+
   <main class="hoc container clear"> 
     <!-- main body -->
     <div class="sidebar one_third first"> 
@@ -23,22 +24,22 @@
     <div class="content two_third"> 
       <h1>Feed Back / Any Suggestion</h1>
       <div id="comments">
-        <form action="#" method="post">
+        <form ng-submit="addsuggestion()">
           <div class="one_third first">
             <label for="name">Name <span>*</span></label>
-            <input type="text" name="name" id="name" value="" size="22" required>
+            <input type="text" name="name" id="name" value="" size="22" ng-model="name" required>
           </div>
           <div class="one_third">
-            <label for="email">Mail <span>*</span></label>
-            <input type="email" name="email" id="email" value="" size="22" required>
+            <label for="usermail">Mail <span>*</span></label>
+            <input type="email" name="usermail" id="usermail" value="" size="22" ng-model="usermail" required>
           </div>
           <div class="one_third">
-            <label for="url">Phone No. <span>*</span></label>
-            <input type="url" name="url" id="url" value="" size="22">
+            <label for="phonenumber">Phone No. <span>*</span></label>
+            <input type="number" name="phonenumber" id="phonenumber" value="" size="22" ng-model="phone" required>
           </div>
           <div class="block clear">
             <label for="comment">Your Comment</label>
-            <textarea name="comment" id="comment" cols="25" rows="10"></textarea>
+            <textarea name="comment" id="comment" cols="25" rows="10" maxlength="2000" ng-model="usercomments"></textarea>
           </div>
           <div>
             <input type="submit" name="submit" value="Submit Form">

@@ -1,5 +1,6 @@
 package com.mapping;
 
+
 import java.util.Date;
 
 import javax.persistence.*;
@@ -11,17 +12,13 @@ import javax.persistence.*;
  *
  */
 @Entity
-@Table(name = "tbluserdetails")
-public class Users {
+@Table(name = "tblsuggestion")
+public class Suggestion {
 
 	@Id
 	@GeneratedValue
-	@Column(name = "flduserid")
+	@Column(name = "fldid")
 	private int id;
-	@Column(name = "fldusername")
-	private String username;
-	@Column(name = "fldpassword")
-	private String password;
 	@Column(name = "fldemail")
 	private String email;
 	@Column(name = "fldphonenumber")
@@ -30,15 +27,6 @@ public class Users {
 	private String firstname;
 	@Column(name = "fldlastname")
 	private String lastname;
-	/**
-	 * 1 for Enrolled to free lancing course, 2 for Live web hosting
-	 */
-	@Column(name = "fldtype")
-	private int usertype;
-	@Column(name = "fldispaid")
-	private int ispaid;
-	@Column(name = "fldisdeleted")
-	private int isdeleted;
 	@Column(name = "fldTimeStamp", columnDefinition="DATETIME")
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date createtime;
@@ -46,29 +34,13 @@ public class Users {
 	private String usercomments;
 	@Column(name = "fldacceptorcomments")
 	private String acceptorcomments;
-	
+
 	public int getId() {
 		return id;
 	}
 
 	public void setId(int id) {
 		this.id = id;
-	}
-
-	public String getUsername() {
-		return username;
-	}
-
-	public void setUsername(String username) {
-		this.username = username;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
 	}
 
 	public String getEmail() {
@@ -101,30 +73,6 @@ public class Users {
 
 	public void setLastname(String lastname) {
 		this.lastname = lastname;
-	}
-
-	public int getIspaid() {
-		return ispaid;
-	}
-
-	public void setIspaid(int ispaid) {
-		this.ispaid = ispaid;
-	}
-
-	public int getIsdeleted() {
-		return isdeleted;
-	}
-
-	public void setIsdeleted(int isdeleted) {
-		this.isdeleted = isdeleted;
-	}
-
-	public int getUsertype() {
-		return usertype;
-	}
-
-	public void setUsertype(int usertype) {
-		this.usertype = usertype;
 	}
 
 	public Date getCreatetime() {

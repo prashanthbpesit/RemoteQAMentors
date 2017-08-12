@@ -30,6 +30,10 @@ public class DemoRequest {
 	@Column(name = "fldTimeStamp", columnDefinition="DATETIME")
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date createtime;
+	@Column(name = "fldusercomments")
+	private String usercomments;
+	@Column(name = "fldacceptorcomments")
+	private String acceptorcomments;
 
 	public int getId() {
 		return id;
@@ -77,6 +81,22 @@ public class DemoRequest {
 
 	public void setCreatetime(Date createtime) {
 		this.createtime = createtime;
+	}
+
+	public String getUsercomments() {
+		return usercomments;
+	}
+
+	public void setUsercomments(String usercomments) {
+		this.usercomments = usercomments;
+	}
+
+	public String getAcceptorcomments() {
+		return acceptorcomments;
+	}
+
+	public void setAcceptorcomments(String acceptorcomments) {
+		this.acceptorcomments = acceptorcomments;
 	}
 
 }
