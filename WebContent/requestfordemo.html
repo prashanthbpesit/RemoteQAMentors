@@ -1,6 +1,5 @@
 <div id="top">
-
-<div class="wrapper row1" id="htmlheader" style="position: fixed;top: 0;right: 0;left: 0;width: 100%;z-index: 1030;">
+<div class="wrapper row1" id="htmlheader" style="position: fixed;top: 0;right: 0;left: 0;width: 100%;">
 <!-- header contents start here -->
 <div ng-include="'header.html'"></div>
 </div>
@@ -23,7 +22,7 @@
     <div class="content two_third"> 
       <h1>Request for a Demo</h1>
       <div id="comments">
-      <form ng-submit="registerLogin()">
+      <form ng-submit="demoRequest()">
           <div class="one_third first">
             <label for="firstname">First Name <span>*</span></label>
             <input type="text" name="firstname" id="firstname" value="" size="40" ng-model="firstname" required>

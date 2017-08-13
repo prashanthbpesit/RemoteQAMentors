@@ -123,7 +123,7 @@ public class ToolManager {
 	 * @return
 	 */
 	public Users commonUsers(String inUserName, String inPassword, String inEmail, String inPhone, String inFirstName,
-			String inLastName, int inType, int inPaid) {
+			String inLastName, int inType, int inPaid, String inUserComments) {
 		Users users = new Users();
 		try {
 			users = new Users();
@@ -134,6 +134,7 @@ public class ToolManager {
 			users.setUsername(inUserName);
 			users.setPassword(inPassword);
 			users.setUsertype(inType);
+			users.setUsercomments(inUserComments);
 			users.setIsdeleted(0);
 			users.setIspaid(inPaid);
 		} catch (Exception Ex) {
@@ -157,7 +158,7 @@ public class ToolManager {
 	 * @return
 	 */
 	public String addUsers(String inUserName, String inPassword, String inEmail, String inPhone, String inFirstName,
-			String inLastName, int inType) {
+			String inLastName, int inType, String inUserComments) {
 		String ReturnValue = "";
 		SessionFactory SessionFactory = null;
 		Session session = null;
@@ -175,7 +176,7 @@ public class ToolManager {
 			
 			if (isValid) {
 				Tx = session.beginTransaction();
-				users = commonUsers(inUserName, inPassword, inEmail, inPhone, inFirstName, inLastName, inType, 0);
+				users = commonUsers(inUserName, inPassword, inEmail, inPhone, inFirstName, inLastName, inType, 0, inUserComments);
 				Integer UserId = (Integer) session.save(users);
 				users = null;
 				Tx.commit();

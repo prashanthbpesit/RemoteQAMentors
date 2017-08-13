@@ -1,31 +1,145 @@
-<div id="top">
-
-<div class="wrapper row1" id="htmlheader" style="position: fixed;top: 0;right: 0;left: 0;width: 100%;z-index: 1030;">
+<div id="pagetop">
+<div class="wrapper row1" id="htmlheader" style="position: fixed;top: 0;right: 0;left: 0;width: 100%;">
 <!-- header contents start here -->
 <div ng-include="'header.html'"></div>
 </div>
 <div ng-controller="FreeLancingController">
-<div class="wrapper row3">
-  <article class="hoc container clear"> 
+<div class="wrapper bgded overlay light" style="background-image:url('images/demo/backgrounds/03.png');">
+  <section class="hoc container clear"> 
     <div class="sectiontitle">
-      <h3 class="heading">Free Lancing Project</h3>
-      <p>Etiam euismod neque sapien eget suscipit justo pharetra id.</p>
+      <h3 class="heading">Freelancing Courses</h3>
+      <p>How to earn extra income by Testing Apps & Websites</p>
     </div>
-    <figure>
-      <ul class="nospace group logos">
-        <li class="one_quarter first"><a href="#"><img src="images/demo/222x100.png" alt=""></a></li>
-        <li class="one_quarter"><a href="#"><img src="images/demo/222x100.png" alt=""></a></li>
-        <li class="one_quarter"><a href="#"><img src="images/demo/222x100.png" alt=""></a></li>
-        <li class="one_quarter"><a href="#"><img src="images/demo/222x100.png" alt=""></a></li>
+    <ul class="nospace group services">
+      <li class="one_third first">
+        <article>	
+        <video width="320" height="240" controls="controls" >
+			<source src="video/echo-hereweare.mp4" type="video/mp4">
+			<object data="" width="320" height="240"><embed width="320" height="240" src="video/echo-hereweare.mp4"></object>
+		</video>
+          <h6 class="heading">Training week 1</h6>
+          <p>This week will get basics of testing and other activities </p>
+        </article>
+      </li>
+      <li class="one_third">
+        <article>
+		<video width="320" height="240" controls="controls" >
+			<source src="video/echo-hereweare.mp4" type="video/mp4">
+			<object data="" width="320" height="240"><embed width="320" height="240" src="video/echo-hereweare.mp4"></object>
+		</video>
+          <h6 class="heading">Training week 2</h6>
+          <p>This week will get basics of testing and other activities</p>
+        </article>
+      </li>
+      <li class="one_third">
+        <article>
+        <video width="320" height="240" controls="controls" >
+			<source src="video/echo-hereweare.mp4" type="video/mp4">
+			<object data="" width="320" height="240"><embed width="320" height="240" src="video/echo-hereweare.mp4"></object>
+		</video>
+          <h6 class="heading">Training week 3</h6>
+          <p>This week will get basics of testing and other activities</p>
+        </article>
+      </li>
+      <li class="one_third first">
+        <article>
+		<video width="320" height="240" controls="controls" >
+			<source src="video/echo-hereweare.mp4" type="video/mp4">
+			<object data="" width="320" height="240"><embed width="320" height="240" src="video/echo-hereweare.mp4"></object>
+		</video>
+          <h6 class="heading">Training week 4</h6>
+          <p>This week will get basics of testing and other activities</p>
+        </article>
+      </li>
+      <li class="one_third">
+        <article>
+        <video width="320" height="240" controls="controls" >
+			<source src="video/echo-hereweare.mp4" type="video/mp4">
+			<object data="" width="320" height="240"><embed width="320" height="240" src="video/echo-hereweare.mp4"></object>
+		</video>
+          <h6 class="heading">Training week 5</h6>
+          <p>This week will get basics of testing and other activities</p>
+        </article>
+      </li>
+      <li class="one_third">
+        <article>
+		<video width="320" height="240" controls="controls" >
+			<source src="video/echo-hereweare.mp4" type="video/mp4">
+			<object data="" width="320" height="240"><embed width="320" height="240" src="video/echo-hereweare.mp4"></object>
+		</video>
+          <h6 class="heading">Training week 6</h6>
+          <p>This week will get basics of testing and other activities</p>
+        </article>
+      </li>
+    </ul>
+    <div class="clear"></div>
+  </section>
+</div>
+
+
+<div class="wrapper row1" style="height: 100%">
+  <main class="hoc container clear"> 
+    <!-- main body -->
+    <div class="sidebar one_third first"> 
+      <h2>More Info</h2>
+      <nav class="sdb_holder">
+       <ul class="nospace">
+       <li> Name: Sumith Jain </li>
+        <li>Contact Number: +1- 609-613-7893</li>
+        <li>Email: support@remoteqamentors.com</li>
       </ul>
-    </figure>
-  </article>
+      </nav>
+      <p style="font: bold;"> Note: Mentorship program available only for people living in USA & Canada.</p>
+    </div>
+    <div class="content two_third"> 
+      <h2>To enroll into Free Lancing Courses </h2>
+      <div id="comments">
+      <form ng-submit="registerLogin()">
+      <div class="one_third first">
+            <label for="username">User Name <span>*</span></label>
+            <input type="text" name="username" id="username" value="" size="40" ng-model="username" required>
+          </div>
+          <div class="one_third">
+            <label for="userpassword">Password <span>*</span></label>
+            <input type="password" name="userpassword" id="userpassword" value="" size="40" ng-model="userpassword" required>
+          </div>
+          <div class="one_third first">
+            <label for="firstname">First Name <span>*</span></label>
+            <input type="text" name="firstname" id="firstname" value="" size="40" ng-model="firstname" required>
+          </div>
+          <div class="one_third">
+            <label for="lastname">Last Name <span>*</span></label>
+            <input type="text" name="lastname" id="lastname" value="" size="40" ng-model="lastname" required>
+          </div>
+          <div class="one_third first">
+            <label for="usermail">Mail <span>*</span></label>
+            <input type="email" name="usermail" id="usermail" value="" size="40" ng-model="usermail" required>
+          </div>
+          <div class="one_third">
+            <label for="phonenumber">Phone No.<span>*</span></label>
+            <input type="number" name="phonenumber" id="phonenumber" value="" size="30" ng-model="phone" required >
+          </div>
+          <div class="block clear">
+            <label for="comment">Your Expectations</label>
+            <textarea name="comment" id="comment" title="what do you expect on us" cols="25" rows="10" maxlength="2000" ng-model="usercomments"></textarea>
+          </div>
+          <div>
+            <input type="submit" name="submit" value="Submit"/>
+            &nbsp;
+            <input type="reset" name="reset" value="Reset Form">
+          </div>
+          </form>
+      </div>
+    </div>
+    <!-- / main body -->
+    <div class="clear"></div>
+  </main>
 </div>
 </div>
 <!-- <div class="wrapper row1" id="htmlfooter" style="bottom: 0px; position: fixed;">
 footer contents start here
 <div ng-include="'footer.html'"></div>
 </div> -->
-<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<a id="backtotop" ng-click="document.getElementById('pagetop').style.top = '100px'"><i class="fa fa-chevron-up"></i></a>
 <!-- JAVASCRIPTS -->
 </div>

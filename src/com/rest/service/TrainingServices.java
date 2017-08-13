@@ -57,13 +57,14 @@ public class TrainingServices {
 	@Produces(MediaType.APPLICATION_XML)
 	public String enrollToFreeLancing(@QueryParam("username") String inUserName,
 			@QueryParam("password") String inPassword, @QueryParam("firstname") String inFirstName,
-			@QueryParam("lastname") String inLastName, @QueryParam("email") String inEmail,
-			@QueryParam("phone") String inPhone) {
+			@QueryParam("lastname") String inLastName, @QueryParam("usermail") String inEmail,
+			@QueryParam("phone") String inPhone, @QueryParam("usercomments") String inUserComments) {
 		String value = "";
 		try {
 			System.out.println(inUserName + "======" + inPassword + "========" + inEmail + "===" + inPhone);
 			ToolManager ToolManager = new ToolManager();
-			value = ToolManager.addUsers(inUserName, inPassword, inEmail, inPhone, inFirstName, inLastName, 1);
+			value = ToolManager.addUsers(inUserName, inPassword, inEmail, inPhone, inFirstName, inLastName, 1,
+					inUserComments);
 			ToolManager = null;
 		} catch (Exception Ex) {
 			Ex.printStackTrace();
@@ -86,12 +87,14 @@ public class TrainingServices {
 	@Produces(MediaType.APPLICATION_XML)
 	public String enrollToLiveWeb(@QueryParam("username") String inUserName, @QueryParam("password") String inPassword,
 			@QueryParam("firstname") String inFirstName, @QueryParam("lastname") String inLastName,
-			@QueryParam("email") String inEmail, @QueryParam("phone") String inPhone) {
+			@QueryParam("usermail") String inEmail, @QueryParam("phone") String inPhone,
+			@QueryParam("usercomments") String inUserComments) {
 		String value = "";
 		try {
 			System.out.println(inUserName + "======" + inPassword + "========" + inEmail + "===" + inPhone);
 			ToolManager ToolManager = new ToolManager();
-			value = ToolManager.addUsers(inUserName, inPassword, inEmail, inPhone, inFirstName, inLastName, 2);
+			value = ToolManager.addUsers(inUserName, inPassword, inEmail, inPhone, inFirstName, inLastName, 2,
+					inUserComments);
 			ToolManager = null;
 		} catch (Exception Ex) {
 			Ex.printStackTrace();
@@ -126,7 +129,7 @@ public class TrainingServices {
 			@QueryParam("phone") String inPhone, @QueryParam("usercomments") String inUserComments) {
 		String value = "";
 		try {
-			System.out.println("addSuggestion========="+inName +"========" + inEmail + "===" + inPhone);
+			System.out.println("addSuggestion=========" + inName + "========" + inEmail + "===" + inPhone);
 			ToolManager ToolManager = new ToolManager();
 			value = ToolManager.suggestion(inName, inEmail, inPhone, inUserComments);
 			ToolManager = null;

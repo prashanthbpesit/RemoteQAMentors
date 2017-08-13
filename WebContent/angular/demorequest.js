@@ -1,5 +1,5 @@
 mainApp.controller('DemoRequestController', function($scope,  $http) {
-$scope.registerLogin = function() {
+$scope.demoRequest = function() {
 	try {
 		alert($scope.firstname+"====="+$scope.lastname+"======"+$scope.usermail+"===="+$scope.phone)
 		 $http.post("/RemoteQAMentors/rest/services/demorequest?firstname="+$scope.firstname+"&lastname="+$scope.lastname
