@@ -41,6 +41,10 @@ mainApp.config(function($routeProvider) {
 			templateUrl: 'requestfordemo.html',
 			controller: 'DemoRequestController'
 		})
+		.when('/reqdetails', {
+			templateUrl: 'reqdetails.html',
+			controller: 'RequestDetailsController'
+		})
 		.otherwise({
 			redirectTo: '/home'
 		});

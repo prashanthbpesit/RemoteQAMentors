@@ -1,13 +1,11 @@
-<div  id="top" >
-
+<div id="top">
 <div class="wrapper row1" id="htmlheader" style="position: fixed;top: 0;right: 0;left: 0;width: 100%;z-index: 1030">
 <!-- header contents start here -->
 <div ng-include="'header.html'"></div>
 </div>
-<div ng-controller="ContactUsController">
+<div ng-controller="RequestDetailsController">
 
 <div class="wrapper row1" style="height: 100%">
-
   <main class="hoc container clear"> 
     <!-- main body -->
     <div class="sidebar one_third first"> 
@@ -22,42 +20,46 @@
       <p style="font: bold;"> Note: Mentorship program available only for people living in USA & Canada.</p>
     </div>
     <div class="content two_third"> 
-      <h1>Feed Back / Any Suggestion</h1>
+      <h1>Request for a Demo</h1>
       <div id="comments">
-        <form ng-submit="addsuggestion()">
+      <form ng-submit="demoRequest()">
           <div class="one_third first">
-            <label for="name">Name <span>*</span></label>
-            <input type="text" name="name" id="name" value="" size="22" ng-model="name" required>
+            <label for="firstname">First Name <span>*</span></label>
+            <input type="text" name="firstname" id="firstname" value="" size="40" ng-model="firstname" required>
           </div>
           <div class="one_third">
+            <label for="lastname">Last Name <span>*</span></label>
+            <input type="text" name="lastname" id="lastname" value="" size="40" ng-model="lastname" required>
+          </div>
+          <div class="one_third first">
             <label for="usermail">Mail <span>*</span></label>
-            <input type="email" name="usermail" id="usermail" value="" size="22" ng-model="usermail" required>
+            <input type="email" name="usermail" id="usermail" value="" size="40" ng-model="usermail" required>
           </div>
           <div class="one_third">
-            <label for="phonenumber">Phone No. <span>*</span></label>
-            <input type="number" name="phonenumber" id="phonenumber" value="" size="22" ng-model="phone" required>
+            <label for="phonenumber">Phone No.<span>*</span></label>
+            <input type="number" name="phonenumber" id="phonenumber" value="" size="30" ng-model="phone" required >
           </div>
           <div class="block clear">
-            <label for="comment">Your Comment</label>
-            <textarea name="comment" id="comment" cols="25" rows="10" maxlength="2000" ng-model="usercomments"></textarea>
+            <label for="comment">Your Expectations</label>
+            <textarea name="comment" id="comment" title="what do you expect on us" cols="25" rows="10" maxlength="2000" ng-model="usercomments"></textarea>
           </div>
           <div>
-            <input type="submit" name="submit" value="Submit Form">
+            <input type="submit" name="submit" value="Submit"/>
             &nbsp;
             <input type="reset" name="reset" value="Reset Form">
           </div>
-        </form>
+          </form>
       </div>
     </div>
+    <!-- / main body -->
     <div class="clear"></div>
   </main>
 </div>
 </div>
-
 <!-- <div class="wrapper row1" id="htmlfooter" style="bottom: 0px; position: fixed;">
 footer contents start here
 <div ng-include="'footer.html'"></div>
 </div> -->
-<a id="backtotop" style="top : 0px;"><i class="fa fa-chevron-up"></i></a>
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
 <!-- JAVASCRIPTS -->
 </div>
