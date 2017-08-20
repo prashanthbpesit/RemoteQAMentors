@@ -2,13 +2,13 @@ package com.rest.service;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
-
+import com.dbmanager.RequestPojo;
+import com.dbmanager.SuggestionPojo;
 import com.dbmanager.ToolManager;
 import com.dbmanager.UserPojo;
 import com.google.gson.Gson;
@@ -103,6 +103,15 @@ public class TrainingServices {
 		}
 	}
 
+	/**
+	 * 
+	 * @param inFirstName
+	 * @param inLastName
+	 * @param inEmail
+	 * @param inPhone
+	 * @param inUserComments
+	 * @return
+	 */
 	@POST
 	@Path("/demorequest")
 	@Produces(MediaType.APPLICATION_XML)
@@ -122,6 +131,14 @@ public class TrainingServices {
 		}
 	}
 
+	/**
+	 * 
+	 * @param inName
+	 * @param inEmail
+	 * @param inPhone
+	 * @param inUserComments
+	 * @return
+	 */
 	@POST
 	@Path("/addSuggestion")
 	@Produces(MediaType.APPLICATION_XML)
@@ -133,6 +150,90 @@ public class TrainingServices {
 			ToolManager ToolManager = new ToolManager();
 			value = ToolManager.suggestion(inName, inEmail, inPhone, inUserComments);
 			ToolManager = null;
+		} catch (Exception Ex) {
+			Ex.printStackTrace();
+		} finally {
+			return value;
+		}
+	}
+
+	/**
+	 * 
+	 * @return
+	 */
+	@POST
+	@Path("/getDemoRequetDetails")
+	@Produces(MediaType.APPLICATION_XML)
+	public String getDemoRequetDetails() {
+		String value = "";
+		try {
+			ToolManager ToolManager = new ToolManager();
+			List<RequestPojo> ReturnList = ToolManager.getDemoRequest();
+			ToolManager = null;
+			value = new Gson().toJson(ReturnList).toString();
+		} catch (Exception Ex) {
+			Ex.printStackTrace();
+		} finally {
+			return value;
+		}
+	}
+
+	/**
+	 * 
+	 * @return
+	 */
+	@POST
+	@Path("/getSuggestionDetails")
+	@Produces(MediaType.APPLICATION_XML)
+	public String getSuggestionDetails() {
+		String value = "";
+		try {
+			ToolManager ToolManager = new ToolManager();
+			List<SuggestionPojo> ReturnList = ToolManager.getSuggestionRequest();
+			ToolManager = null;
+			value = new Gson().toJson(ReturnList).toString();
+		} catch (Exception Ex) {
+			Ex.printStackTrace();
+		} finally {
+			return value;
+		}
+	}
+
+	/**
+	 * 
+	 * @return
+	 */
+	@POST
+	@Path("/getFreeLancingDetails")
+	@Produces(MediaType.APPLICATION_XML)
+	public String getFreeLancingDetails() {
+		String value = "";
+		try {
+			ToolManager ToolManager = new ToolManager();
+			List<UserPojo> ReturnList = ToolManager.getFreeLancingDetails();
+			ToolManager = null;
+			value = new Gson().toJson(ReturnList).toString();
+		} catch (Exception Ex) {
+			Ex.printStackTrace();
+		} finally {
+			return value;
+		}
+	}
+
+	/**
+	 * 
+	 * @return
+	 */
+	@POST
+	@Path("/getLiveWevDetails")
+	@Produces(MediaType.APPLICATION_XML)
+	public String getLiveWevDetails() {
+		String value = "";
+		try {
+			ToolManager ToolManager = new ToolManager();
+			List<UserPojo> ReturnList = ToolManager.getLiveWebDetails();
+			ToolManager = null;
+			value = new Gson().toJson(ReturnList).toString();
 		} catch (Exception Ex) {
 			Ex.printStackTrace();
 		} finally {

@@ -1,58 +1,86 @@
 package com.dbmanager;
 
 public class RequestPojo {
-	private int id;
-	private String email;
-	private String phonenumber;
-	private String firstname;
-	private String lastname;
-	private String requesttime;
+	private int mid;
+	private String memail;
+	private String mphonenumber;
+	private String mfirstname;
+	private String mlastname;
+	private String mrequesttime;
+	private String musercomments;
+	private String macceptorcomments;
+	private int mnid;
 
-	public int getId() {
-		return id;
+	public int getMid() {
+		return mid;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setMid(int mid) {
+		this.mid = mid;
 	}
 
-	public String getEmail() {
-		return email;
+	public String getMemail() {
+		return memail;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setMemail(String memail) {
+		this.memail = memail;
 	}
 
-	public String getPhonenumber() {
-		return phonenumber;
+	public String getMphonenumber() {
+		return mphonenumber;
 	}
 
-	public void setPhonenumber(String phonenumber) {
-		this.phonenumber = phonenumber;
+	public void setMphonenumber(String mphonenumber) {
+		this.mphonenumber = mphonenumber;
 	}
 
-	public String getFirstname() {
-		return firstname;
+	public String getMfirstname() {
+		return mfirstname;
 	}
 
-	public void setFirstname(String firstname) {
-		this.firstname = firstname;
+	public void setMfirstname(String mfirstname) {
+		this.mfirstname = mfirstname;
 	}
 
-	public String getLastname() {
-		return lastname;
+	public String getMlastname() {
+		return mlastname;
 	}
 
-	public void setLastname(String lastname) {
-		this.lastname = lastname;
+	public void setMlastname(String mlastname) {
+		this.mlastname = mlastname;
 	}
 
-	public String getRequesttime() {
-		return requesttime;
+	public String getMrequesttime() {
+		return mrequesttime;
 	}
 
-	public void setRequesttime(String requesttime) {
-		this.requesttime = requesttime;
+	public void setMrequesttime(String mrequesttime) {
+		this.mrequesttime = mrequesttime;
 	}
+
+	public String getMusercomments() {
+		return musercomments;
+	}
+
+	public void setMusercomments(String musercomments) {
+		this.musercomments = musercomments;
+	}
+
+	public String getMacceptorcomments() {
+		return macceptorcomments;
+	}
+
+	public void setMacceptorcomments(String macceptorcomments) {
+		this.macceptorcomments = macceptorcomments;
+	}
+
+	public int getMnid() {
+		return mnid;
+	}
+
+	public void setMnid(int mnid) {
+		this.mnid = mnid;
+	}
+
 }

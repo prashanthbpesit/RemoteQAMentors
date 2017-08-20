@@ -18,7 +18,6 @@ public class ToolManager {
 
 	public static void main(String args[]) {
 		// addRegistration();
-		getDemoRequest();
 	}
 
 	/**
@@ -173,10 +172,11 @@ public class ToolManager {
 			// Verify for the valid users
 			boolean isValid = commonUsersCheck(inUserName, inType, session);
 			// If the valid users
-			
+
 			if (isValid) {
 				Tx = session.beginTransaction();
-				users = commonUsers(inUserName, inPassword, inEmail, inPhone, inFirstName, inLastName, inType, 0, inUserComments);
+				users = commonUsers(inUserName, inPassword, inEmail, inPhone, inFirstName, inLastName, inType, 0,
+						inUserComments);
 				Integer UserId = (Integer) session.save(users);
 				users = null;
 				Tx.commit();
@@ -209,7 +209,8 @@ public class ToolManager {
 	}
 
 	/**
-	 *  To add details for request for demo
+	 * To add details for request for demo
+	 * 
 	 * @param inFirstName
 	 * @param inLastName
 	 * @param inEmail
@@ -217,7 +218,8 @@ public class ToolManager {
 	 * @param ininUserComments
 	 * @return
 	 */
-	public String demoRequest(String inFirstName, String inLastName, String inEmail, String inPhone, String ininUserComments) {
+	public String demoRequest(String inFirstName, String inLastName, String inEmail, String inPhone,
+			String ininUserComments) {
 		String ReturnValue = "";
 		SessionFactory SessionFactory = null;
 		Session session = null;
@@ -259,6 +261,7 @@ public class ToolManager {
 			return ReturnValue;
 		}
 	}
+
 	/**
 	 * 
 	 * @param inFirstName
@@ -287,8 +290,7 @@ public class ToolManager {
 			Suggestion.setUsercomments(ininUserComments);
 			Integer UserId = (Integer) session.save(Suggestion);
 			Val = new StringBuilder();
-			Val.append("Dear ").append(inName)
-					.append(" thanks for suggesting us.");
+			Val.append("Dear ").append(inName).append(" thanks for suggesting us.");
 			ReturnValue = Val.toString();
 			Val = null;
 			Suggestion = null;
@@ -310,12 +312,13 @@ public class ToolManager {
 			return ReturnValue;
 		}
 	}
+
 	/**
 	 * 
 	 * @return
 	 */
 
-	public static List<RequestPojo> getDemoRequest() {
+	public List<RequestPojo> getDemoRequest() {
 		String ReturnValue = "";
 		SessionFactory SessionFactory = null;
 		Session session = null;
@@ -333,23 +336,193 @@ public class ToolManager {
 			StringQuery = null;
 			List<DemoRequest> TempRequests = LoginQuery.list();
 			LoginQuery = null;
+			int nid = 1;
 			if (TempRequests != null && !TempRequests.isEmpty()) {
 				for (DemoRequest DemoRequests : TempRequests) {
 					RequestPojo = new RequestPojo();
-					RequestPojo.setId(DemoRequests.getId());
-					RequestPojo.setFirstname(DemoRequests.getFirstname());
-					RequestPojo.setEmail(DemoRequests.getEmail());
-					RequestPojo.setLastname(DemoRequests.getLastname());
-					RequestPojo.setPhonenumber(DemoRequests.getPhonenumber());
-					String dateString = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss")
+					RequestPojo.setMnid(nid++);
+					RequestPojo.setMid(DemoRequests.getId());
+					RequestPojo.setMfirstname(DemoRequests.getFirstname());
+					RequestPojo.setMemail(DemoRequests.getEmail());
+					RequestPojo.setMlastname(DemoRequests.getLastname());
+					RequestPojo.setMphonenumber(DemoRequests.getPhonenumber());
+					String dateString = new SimpleDateFormat("dd-MM-yyyy hh:mm:ss a z")
 							.format(DemoRequests.getCreatetime());
 					System.out.println(dateString + "==========" + DemoRequests.getCreatetime());
-					RequestPojo.setRequesttime(dateString);
+					RequestPojo.setMrequesttime(dateString);
+					RequestPojo.setMusercomments(DemoRequests.getUsercomments());
+					RequestPojo.setMacceptorcomments(DemoRequests.getAcceptorcomments());
 					RequestList.add(RequestPojo);
 					RequestPojo = null;
 				}
 			}
 			TempRequests = null;
+		} catch (Exception Ex) {
+			ReturnValue = "Please try again.";
+			Ex.printStackTrace();
+		} finally {
+			if (session != null) {
+				session.flush();
+				session.close();
+			}
+			session = null;
+			return RequestList;
+		}
+	}
+
+	/**
+	 * 
+	 * @return
+	 */
+	public List<SuggestionPojo> getSuggestionRequest() {
+		String ReturnValue = "";
+		SessionFactory SessionFactory = null;
+		Session session = null;
+		StringBuilder StringQuery = null;
+		Query LoginQuery = null;
+		StringBuilder Val = null;
+		List<SuggestionPojo> RequestList = new ArrayList<SuggestionPojo>();
+		SuggestionPojo SuggestionPojo = null;
+		try {
+			SessionFactory = HibernateUtil.getSessionFactory();
+			session = SessionFactory.openSession();
+			StringQuery = new StringBuilder();
+			StringQuery.append("from Suggestion Suggestion order by Suggestion.id desc ");
+			LoginQuery = session.createQuery(StringQuery.toString());
+			StringQuery = null;
+			List<Suggestion> TempSuggestions = LoginQuery.list();
+			LoginQuery = null;
+			int nid = 1;
+			if (TempSuggestions != null && !TempSuggestions.isEmpty()) {
+				for (Suggestion Suggestion : TempSuggestions) {
+					SuggestionPojo = new SuggestionPojo();
+					SuggestionPojo.setMnid(nid++);
+					SuggestionPojo.setMid(Suggestion.getId());
+					SuggestionPojo.setMfirstname(Suggestion.getFirstname());
+					SuggestionPojo.setMemail(Suggestion.getEmail());
+					SuggestionPojo.setMlastname(Suggestion.getLastname());
+					SuggestionPojo.setMphonenumber(Suggestion.getPhonenumber());
+					String dateString = new SimpleDateFormat("dd-MM-yyyy  hh:mm:ss a z").format(Suggestion.getCreatetime());
+					System.out.println(dateString + "==========" + Suggestion.getCreatetime());
+					SuggestionPojo.setMcreatetime(dateString);
+					SuggestionPojo.setMusercomments(Suggestion.getUsercomments());
+					SuggestionPojo.setMacceptorcomments(Suggestion.getAcceptorcomments());
+					RequestList.add(SuggestionPojo);
+					SuggestionPojo = null;
+				}
+			}
+			TempSuggestions = null;
+		} catch (Exception Ex) {
+			ReturnValue = "Please try again.";
+			Ex.printStackTrace();
+		} finally {
+			if (session != null) {
+				session.flush();
+				session.close();
+			}
+			session = null;
+			return RequestList;
+		}
+	}
+
+	/**
+	 * 
+	 * @return
+	 */
+
+	public List<UserPojo> getFreeLancingDetails() {
+		String ReturnValue = "";
+		SessionFactory SessionFactory = null;
+		Session session = null;
+		StringBuilder StringQuery = null;
+		Query LoginQuery = null;
+		StringBuilder Val = null;
+		List<UserPojo> RequestList = new ArrayList<UserPojo>();
+		UserPojo UserPojo = null;
+		try {
+			SessionFactory = HibernateUtil.getSessionFactory();
+			session = SessionFactory.openSession();
+			StringQuery = new StringBuilder();
+			StringQuery.append("from Users Users where Users.usertype = 1 order by Users.id desc ");
+			LoginQuery = session.createQuery(StringQuery.toString());
+			StringQuery = null;
+			List<Users> TempUsers = LoginQuery.list();
+			LoginQuery = null;
+			int nid = 1;
+			if (TempUsers != null && !TempUsers.isEmpty()) {
+				for (Users Users : TempUsers) {
+					UserPojo = new UserPojo();
+					UserPojo.setMnid(nid++);
+					UserPojo.setMid(Users.getId());
+					UserPojo.setMfirstname(Users.getFirstname());
+					UserPojo.setMemail(Users.getEmail());
+					UserPojo.setMlastname(Users.getLastname());
+					UserPojo.setMphonenumber(Users.getPhonenumber());
+					String dateString = new SimpleDateFormat("dd-MM-yyyy  hh:mm:ss a z").format(Users.getCreatetime());
+					System.out.println(dateString + "==========" + Users.getCreatetime());
+					UserPojo.setMcreatetime(dateString);
+					UserPojo.setMusercomments(Users.getUsercomments());
+					UserPojo.setMacceptorcomments(Users.getAcceptorcomments());
+					RequestList.add(UserPojo);
+					UserPojo = null;
+				}
+			}
+			TempUsers = null;
+		} catch (Exception Ex) {
+			ReturnValue = "Please try again.";
+			Ex.printStackTrace();
+		} finally {
+			if (session != null) {
+				session.flush();
+				session.close();
+			}
+			session = null;
+			return RequestList;
+		}
+	}
+
+	/**
+	 * 
+	 * @return
+	 */
+	public List<UserPojo> getLiveWebDetails() {
+		String ReturnValue = "";
+		SessionFactory SessionFactory = null;
+		Session session = null;
+		StringBuilder StringQuery = null;
+		Query LoginQuery = null;
+		StringBuilder Val = null;
+		List<UserPojo> RequestList = new ArrayList<UserPojo>();
+		UserPojo UserPojo = null;
+		try {
+			SessionFactory = HibernateUtil.getSessionFactory();
+			session = SessionFactory.openSession();
+			StringQuery = new StringBuilder();
+			StringQuery.append("from Users Users where Users.usertype = 2 order by Users.id desc ");
+			LoginQuery = session.createQuery(StringQuery.toString());
+			StringQuery = null;
+			List<Users> TempUsers = LoginQuery.list();
+			LoginQuery = null;
+			int nid = 1;
+			if (TempUsers != null && !TempUsers.isEmpty()) {
+				for (Users Users : TempUsers) {
+					UserPojo = new UserPojo();
+					UserPojo.setMnid(nid++);
+					UserPojo.setMid(Users.getId());
+					UserPojo.setMfirstname(Users.getFirstname());
+					UserPojo.setMemail(Users.getEmail());
+					UserPojo.setMlastname(Users.getLastname());
+					UserPojo.setMphonenumber(Users.getPhonenumber());
+					String dateString = new SimpleDateFormat("dd-MM-yyyy  hh:mm:ss a z").format(Users.getCreatetime());
+					System.out.println(dateString + "==========" + Users.getCreatetime());
+					UserPojo.setMcreatetime(dateString);
+					UserPojo.setMusercomments(Users.getUsercomments());
+					UserPojo.setMacceptorcomments(Users.getAcceptorcomments());
+					RequestList.add(UserPojo);
+					UserPojo = null;
+				}
+			}
+			TempUsers = null;
 		} catch (Exception Ex) {
 			ReturnValue = "Please try again.";
 			Ex.printStackTrace();

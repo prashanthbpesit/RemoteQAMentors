@@ -1,3 +1,23 @@
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;.
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+ tr:nth-child(even){background-color: #f2f2f2} 
+
+th {
+    background-color: #0f1d79;
+    color: white;
+}
+/* tr:hover{background-color:#2196F3} */
+</style>
+
 <div id="top">
 <div class="wrapper row1" id="htmlheader" style="position: fixed;top: 0;right: 0;left: 0;width: 100%;z-index: 1030">
 <!-- header contents start here -->
@@ -6,54 +26,139 @@
 <div ng-controller="RequestDetailsController">
 
 <div class="wrapper row1" style="height: 100%">
-  <main class="hoc container clear"> 
-    <!-- main body -->
-    <div class="sidebar one_third first"> 
-      <h1>Contact Details</h1>
-      <nav class="sdb_holder">
-       <ul class="nospace">
-       <li> Name: Sumith Jain </li>
-        <li>Contact Number: +1- 609-613-7893</li>
-        <li>Email: support@remoteqamentors.com</li>
-      </ul>
-      </nav>
-      <p style="font: bold;"> Note: Mentorship program available only for people living in USA & Canada.</p>
-    </div>
-    <div class="content two_third"> 
-      <h1>Request for a Demo</h1>
-      <div id="comments">
-      <form ng-submit="demoRequest()">
-          <div class="one_third first">
-            <label for="firstname">First Name <span>*</span></label>
-            <input type="text" name="firstname" id="firstname" value="" size="40" ng-model="firstname" required>
-          </div>
-          <div class="one_third">
-            <label for="lastname">Last Name <span>*</span></label>
-            <input type="text" name="lastname" id="lastname" value="" size="40" ng-model="lastname" required>
-          </div>
-          <div class="one_third first">
-            <label for="usermail">Mail <span>*</span></label>
-            <input type="email" name="usermail" id="usermail" value="" size="40" ng-model="usermail" required>
-          </div>
-          <div class="one_third">
-            <label for="phonenumber">Phone No.<span>*</span></label>
-            <input type="number" name="phonenumber" id="phonenumber" value="" size="30" ng-model="phone" required >
-          </div>
-          <div class="block clear">
-            <label for="comment">Your Expectations</label>
-            <textarea name="comment" id="comment" title="what do you expect on us" cols="25" rows="10" maxlength="2000" ng-model="usercomments"></textarea>
-          </div>
-          <div>
-            <input type="submit" name="submit" value="Submit"/>
-            &nbsp;
-            <input type="reset" name="reset" value="Reset Form">
-          </div>
-          </form>
-      </div>
-    </div>
-    <!-- / main body -->
-    <div class="clear"></div>
-  </main>
+<div class="container">
+
+
+    
+    <h2>Free lancing enrolled details </h2>
+  <p>This will contain free lencing enrolled details for the period.</p> 
+<div class="table-responsive">          
+  <table class="table">
+    <thead>
+      <tr>
+         <th>#</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Phone Number</th>
+        <th>Email</th>
+        <th>Date</th>
+        <th>User Comments</th>
+        <th>Acceptor Comments</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="freelancing in freelancingdata">
+        <td>{{ freelancing.mnid }} </td>
+        <td>{{ freelancing.mfirstname }}</td>
+        <td>{{ freelancing.mlastname }}</td>
+        <td>{{ freelancing.mphonenumber}}</td>
+        <td>{{ freelancing.memail }}</td>
+        <td>{{ freelancing.mcreatetime }}</td>
+        <td>{{ freelancing.musercomments }}</td>
+        <td><textarea rows="3" cols="15" ng-model="acceptorcomments">{{ freelancing.macceptorcomments }}</textarea> </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  </div>
+
+<div class="row" style="width: 20px;"></div>
+    
+     <h2>Live web enrolled details </h2>
+  <p>This will contain live web enrolled details for the period.</p> 
+<div class="table-responsive">          
+  <table class="table" >
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Phone Number</th>
+        <th>Email</th>
+        <th>Date</th>
+        <th>User Comments</th>
+        <th>Acceptor Comments</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="livedata in liewebdata">
+         <td>{{ livedata.mnid }} </td>
+        <td>{{ livedata.mfirstname }}</td>
+        <td>{{ livedata.mlastname }}</td>
+        <td>{{ livedata.mphonenumber}}</td>
+        <td>{{ livedata.memail }}</td>
+        <td>{{ livedata.mcreatetime }}</td>
+        <td>{{ livedata.musercomments }}</td>
+        <td><textarea rows="3" cols="15" ng-model="acceptorcomments">{{ livedata.macceptorcomments }}</textarea> </td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="row" style="width: 20px;"></div>
+  <h2>Request For Demo details </h2>
+  <p>This will contain request for demo details for the period.</p> 
+<div class="table-responsive">          
+  <table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Phone Number</th>
+        <th>Email</th>
+        <th>Date</th>
+        <th>User Comments</th>
+        <th>Acceptor Comments</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="requesteddata in reqdata">
+        <td>{{ requesteddata.mnid }} </td>
+        <td>{{ requesteddata.mfirstname }}</td>
+        <td>{{ requesteddata.mlastname }}</td>
+        <td>{{ requesteddata.mphonenumber}}</td>
+        <td>{{ requesteddata.memail }}</td>
+        <td>{{ requesteddata.mrequesttime }}</td>
+        <td>{{ requesteddata.musercomments }}</td>
+        <td><textarea rows="3" cols="15" ng-model="acceptorcomments">{{ requesteddata.macceptorcomments }}</textarea> </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  </div>
+<!-- <pagination ng-model="currentPage" total-items="reqdata.length" max-size="maxSize" boundary-links="true" > </pagination> -->
+<div class="row" style="width: 20px;"></div>
+<h2>Suggestion details </h2>
+  <p>This will contain suggestion details for the period.</p> 
+<div class="table-responsive">          
+  <table class="table" >
+    <thead>
+      <tr>
+       <th>#</th>
+        <th>Name</th>
+        <th>Phone Number</th>
+        <th>Email</th>
+        <th>Date</th>
+        <th>User Comments</th>
+        <th>Acceptor Comments</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="suggestion in suggestiondata">
+        <td>{{ suggestion.mnid }} </td>
+        <td>{{ suggestion.mfirstname }}</td>
+        <td>{{ suggestion.mphonenumber}}</td>
+        <td>{{ suggestion.memail }}</td>
+        <td>{{ suggestion.mcreatetime }}</td>
+        <td>{{ suggestion.musercomments }}</td>
+        <td><textarea rows="3" cols="15" ng-model="acceptorcomments">{{ suggestion.macceptorcomments }}</textarea> </td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+    <div class="row" style="width: 20px;"></div>
+</div>
 </div>
 </div>
 <!-- <div class="wrapper row1" id="htmlfooter" style="bottom: 0px; position: fixed;">
