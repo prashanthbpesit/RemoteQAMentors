@@ -47,7 +47,7 @@ th {
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="freelancing in freelancingdata">
+      <tr ng-repeat="freelancing in filteredFreeLancingData">
         <td>{{ freelancing.mnid }} </td>
         <td>{{ freelancing.mfirstname }}</td>
         <td>{{ freelancing.mlastname }}</td>
@@ -59,10 +59,12 @@ th {
       </tr>
     </tbody>
   </table>
-  
-  
   </div>
-
+ <div class="row" align="center">
+  <div class="col-md-12" style="align: center"> 
+  <pagination ng-model="freelancingCurrentPage" total-items="freelancingdata.length" max-size="freelancingMaxSize" boundary-links="true"> </pagination> 
+  </div>
+  </div>
 <div class="row" style="width: 20px;"></div>
     
      <h2>Live web enrolled details </h2>
@@ -82,7 +84,7 @@ th {
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="livedata in liewebdata">
+      <tr ng-repeat="livedata in filteredlivewebData">
          <td>{{ livedata.mnid }} </td>
         <td>{{ livedata.mfirstname }}</td>
         <td>{{ livedata.mlastname }}</td>
@@ -94,6 +96,11 @@ th {
       </tr>
     </tbody>
   </table>
+  </div>
+  <div class="row" align="center">
+  <div class="col-md-12" style="align: center"> 
+  <pagination ng-model="livewebCurrentPage" total-items="liewebdata.length" max-size="livewebMaxSize" boundary-links="true"> </pagination> 
+  </div>
   </div>
   <div class="row" style="width: 20px;"></div>
   <h2>Request For Demo details </h2>
@@ -113,7 +120,7 @@ th {
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="requesteddata in reqdata">
+      <tr ng-repeat="requesteddata in filteredRequestedData">
         <td>{{ requesteddata.mnid }} </td>
         <td>{{ requesteddata.mfirstname }}</td>
         <td>{{ requesteddata.mlastname }}</td>
@@ -127,7 +134,14 @@ th {
   </table>
   
   </div>
-<!-- <pagination ng-model="currentPage" total-items="reqdata.length" max-size="maxSize" boundary-links="true" > </pagination> -->
+  
+  <div class="row" align="center">
+  <div class="col-md-12" style="align: center"> 
+  <pagination ng-model="requestedCurrentPage" total-items="reqdata.length" max-size="requestedMaxSize" boundary-links="true"> </pagination> 
+  </div>
+  
+  </div>
+
 <div class="row" style="width: 20px;"></div>
 <h2>Suggestion details </h2>
   <p>This will contain suggestion details for the period.</p> 
@@ -145,7 +159,7 @@ th {
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="suggestion in suggestiondata">
+      <tr ng-repeat="suggestion in filteredSuggestionData">
         <td>{{ suggestion.mnid }} </td>
         <td>{{ suggestion.mfirstname }}</td>
         <td>{{ suggestion.mphonenumber}}</td>
@@ -156,6 +170,11 @@ th {
       </tr>
     </tbody>
   </table>
+  </div>
+   <div class="row" align="center">
+  <div class="col-md-12" style="align: center"> 
+  <pagination ng-model="suggestionCurrentPage" total-items="suggestiondata.length" max-size="suggestionMaxSize" boundary-links="true"> </pagination> 
+  </div>
   </div>
     <div class="row" style="width: 20px;"></div>
 </div>

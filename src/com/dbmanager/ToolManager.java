@@ -348,7 +348,6 @@ public class ToolManager {
 					RequestPojo.setMphonenumber(DemoRequests.getPhonenumber());
 					String dateString = new SimpleDateFormat("dd-MM-yyyy hh:mm:ss a z")
 							.format(DemoRequests.getCreatetime());
-					System.out.println(dateString + "==========" + DemoRequests.getCreatetime());
 					RequestPojo.setMrequesttime(dateString);
 					RequestPojo.setMusercomments(DemoRequests.getUsercomments());
 					RequestPojo.setMacceptorcomments(DemoRequests.getAcceptorcomments());
@@ -403,7 +402,6 @@ public class ToolManager {
 					SuggestionPojo.setMlastname(Suggestion.getLastname());
 					SuggestionPojo.setMphonenumber(Suggestion.getPhonenumber());
 					String dateString = new SimpleDateFormat("dd-MM-yyyy  hh:mm:ss a z").format(Suggestion.getCreatetime());
-					System.out.println(dateString + "==========" + Suggestion.getCreatetime());
 					SuggestionPojo.setMcreatetime(dateString);
 					SuggestionPojo.setMusercomments(Suggestion.getUsercomments());
 					SuggestionPojo.setMacceptorcomments(Suggestion.getAcceptorcomments());
@@ -459,7 +457,6 @@ public class ToolManager {
 					UserPojo.setMlastname(Users.getLastname());
 					UserPojo.setMphonenumber(Users.getPhonenumber());
 					String dateString = new SimpleDateFormat("dd-MM-yyyy  hh:mm:ss a z").format(Users.getCreatetime());
-					System.out.println(dateString + "==========" + Users.getCreatetime());
 					UserPojo.setMcreatetime(dateString);
 					UserPojo.setMusercomments(Users.getUsercomments());
 					UserPojo.setMacceptorcomments(Users.getAcceptorcomments());
@@ -514,7 +511,6 @@ public class ToolManager {
 					UserPojo.setMlastname(Users.getLastname());
 					UserPojo.setMphonenumber(Users.getPhonenumber());
 					String dateString = new SimpleDateFormat("dd-MM-yyyy  hh:mm:ss a z").format(Users.getCreatetime());
-					System.out.println(dateString + "==========" + Users.getCreatetime());
 					UserPojo.setMcreatetime(dateString);
 					UserPojo.setMusercomments(Users.getUsercomments());
 					UserPojo.setMacceptorcomments(Users.getAcceptorcomments());
