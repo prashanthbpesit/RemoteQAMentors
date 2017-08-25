@@ -4,7 +4,7 @@
 <div ng-include="'header.html'"></div>
 </div>
 <div ng-controller="HomeController">
-<div class="bgded overlay" style="background-image:url('images/demo/backgrounds/xyz2.jpg');">
+<div class="wrapper bgded overlay light"  style="height: 100%;background-color: gray;">
   <div id="pageintro" class="hoc clear"> 
     <div style="max-width: 796px;
     width: 100%;
@@ -285,6 +285,6 @@
 <!-- footer contents start here -->
 <div ng-include="'footer.html'"></div>
 </div>
-<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<a id="backtotop" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;" style="z-index: 1031;"><i class="fa fa-chevron-up"></i></a>
 <!-- JAVASCRIPTS -->
 </div>
