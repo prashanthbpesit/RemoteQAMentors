@@ -169,6 +169,7 @@ public class ToolManager {
 		try {
 			SessionFactory = HibernateUtil.getSessionFactory();
 			session = SessionFactory.openSession();
+			Val = new StringBuilder();
 			// Verify for the valid users
 			boolean isValid = commonUsersCheck(inUserName, inType, session);
 			// If the valid users
@@ -187,9 +188,9 @@ public class ToolManager {
 				Val = new StringBuilder();
 				Val.append("Dear ").append(inFirstName).append(" ").append(inLastName)
 						.append(", the User Name already exists, please enter other user name.");
-				Val = null;
 			}
 			ReturnValue = Val.toString();
+			Val = null;
 			Tx = null;
 		} catch (Exception Ex) {
 			if (Tx != null) {

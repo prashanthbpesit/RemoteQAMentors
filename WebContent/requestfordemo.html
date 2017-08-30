@@ -25,6 +25,9 @@
      <div style="border: 2px solid #0f1d79;  border-radius: 12px; background-color: #0f1d79; " align="center">  <h3 style="color: white;">Request for a Demo</h3></div>
       <div id="comments" style="border: 2px solid #0f1d79; border-radius: 6px;padding: 15px;">
       <form ng-submit="demoRequest()">
+      	<div class="content two_third" style="display: none;" id="divreqconfirmaton">
+            <label style="color: blue; font-weight: bold;">{{ ConfirmationMessage }}</label>
+          </div>
           <div class="one_third first">
             <label for="firstname">First Name <span>*</span></label>
             <input type="text" name="firstname" id="firstname" value="" size="40" ng-model="firstname" required>

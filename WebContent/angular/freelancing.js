@@ -1,5 +1,5 @@
 mainApp.controller('FreeLancingController', function($scope, $http) {
-
+	document.getElementById("divlancingconfirmaton").style.display="none";
 	$scope.registerLogin = function() {
 		try {
 			alert($scope.firstname+"====="+$scope.lastname+"======"+$scope.usermail+"===="+$scope.phone)
@@ -8,8 +8,9 @@ mainApp.controller('FreeLancingController', function($scope, $http) {
 					 +"&lastname="+$scope.lastname +"&usermail="+$scope.usermail
 					 +"&phone="+$scope.phone+"&usercomments="+$scope.usercomments).then(
 					function(response) {
-						$scope.values = response.data;
-						alert("========"+$scope.values)
+						$scope.ConfirmationMessage = response.data;
+						alert("========" + $scope.ConfirmationMessage)
+						document.getElementById("divlancingconfirmaton").style.display="block";
 					}) 
 		} catch (err) {
 			alert(err);
