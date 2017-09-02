@@ -27,12 +27,38 @@ th {
 
 <div class="wrapper bgded overlay light"  style="height: 100%;background-color: gray;">
 <div class="container">
+   <h2>Free lancing enrolled details </h2>
+  <p>This will contain free lencing enrolled details for the period.</p>
+  <form> 
+   <div class="row" align="left">
+   <div class="col-md-6" style="align: center"> 
+    <div class="row">
+   <div class="col-md-4" style="align: left;"> 
+ <p> <span>From: </span> </p>
+  </div>
+  <div class="col-md-4" style="align: left;"> 
+   <p><input type="date" name="bday" max="2979-12-31" ng-model="calfromfldate"/></p>
+  </div>
+  <div class="col-md-4" style="align: right;"> 
+   <p><span> To: </span></p>
+  </div>
+  </div>
+   </div>
+   <div class="col-md-6"> 
+    <div class="row">
+ 	 <div class="col-md-4" style="align: left;"> 
+ 	  <p> 
+ 	  <input type="date" name="bday" max="2979-12-31" ng-model="caltofldate"/></p>
+ 	 </div>
+  	<div class="col-md-4" style="align: right;"> 
+	   <p><input type="submit" name="submit" value="Search" style="color: #ffffff;background-color: #00ADEF;"/></p>
+   </div>
+   </div>
+  </div>
+  </div>
+   </form>     
+<div class="table-responsive">  
 
-
-    
-    <h2>Free lancing enrolled details </h2>
-  <p>This will contain free lencing enrolled details for the period.</p> 
-<div class="table-responsive">          
   <table class="table">
     <thead>
       <tr>
@@ -66,8 +92,7 @@ th {
   </div>
   </div>
 <div class="row" style="width: 20px;"></div>
-    
-     <h2>Live web enrolled details </h2>
+  <h2>Live web enrolled details </h2>
   <p>This will contain live web enrolled details for the period.</p> 
 <div class="table-responsive">          
   <table class="table" >
@@ -134,16 +159,13 @@ th {
   </table>
   
   </div>
-  
   <div class="row" align="center">
   <div class="col-md-12" style="align: center"> 
   <pagination ng-model="requestedCurrentPage" total-items="reqdata.length" max-size="requestedMaxSize" boundary-links="true"> </pagination> 
   </div>
-  
   </div>
-
 <div class="row" style="width: 20px;"></div>
-<h2>Suggestion details </h2>
+ <h2>Suggestion details </h2>
   <p>This will contain suggestion details for the period.</p> 
 <div class="table-responsive">          
   <table class="table" >

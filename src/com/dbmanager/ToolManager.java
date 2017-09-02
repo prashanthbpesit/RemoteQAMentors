@@ -291,7 +291,7 @@ public class ToolManager {
 			Suggestion.setUsercomments(ininUserComments);
 			Integer UserId = (Integer) session.save(Suggestion);
 			Val = new StringBuilder();
-			Val.append("Dear ").append(inName).append(" thanks for suggesting us.");
+			Val.append("Dear ").append(inName).append(" thanks for contacting us.");
 			ReturnValue = Val.toString();
 			Val = null;
 			Suggestion = null;

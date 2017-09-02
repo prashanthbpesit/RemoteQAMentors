@@ -1,9 +1,16 @@
 mainApp.controller('RequestDetailsController', function($scope, $http) {
-	getDemoReuestList();
-	getSuggestionList();
-	getFreeLancingList();
-	getLiveWebList();
-
+	getAllLists();
+	
+	function getAllLists(){
+		try{
+			getDemoReuestList();
+			getSuggestionList();
+			getFreeLancingList();
+			getLiveWebList();
+		}catch(err){
+			alert(err);
+		}
+	}
 	function getDemoReuestList() {
 		try {
 			$http.post("/RemoteQAMentors/rest/services/getDemoRequetDetails").then(

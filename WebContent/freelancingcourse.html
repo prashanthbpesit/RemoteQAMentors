@@ -4,16 +4,17 @@
 <div ng-include="'header.html'"></div>
 </div>
 <div ng-controller="FreeLancingController">
-<div class="wrapper bgded overlay light"  style="height: 100%;background-color: gray;">
-  <section class="hoc container clear"> 
-    <div class="sectiontitle">
+<div class="wrapper bgded overlay light"  style="height: 100%;">
+ <main class="hoc container clear"> 
+ <!-- <div class="sectiontitle">
       <h3 class="heading">Freelancing Courses</h3>
       <p>How to earn extra income by Testing Apps & Websites</p>
-    </div>
+    </div> -->
+ <div class="two_third first"> 
     <ul class="nospace group services">
-      <li class="one_third first">
+      <li class="one_half first" style="padding-left: 10px;">
         <article>	
-        <video width="320" height="240" controls="controls" >
+        <video width="300" height="240" controls="controls" >
 			<source src="video/echo-hereweare.mp4" type="video/mp4">
 			<object data="" width="320" height="240"><embed width="320" height="240" src="video/echo-hereweare.mp4"></object>
 		</video>
@@ -21,9 +22,9 @@
           <p>This week will get basics of testing and other activities </p>
         </article>
       </li>
-      <li class="one_third">
+      <li class="one_half">
         <article>
-		<video width="320" height="240" controls="controls" >
+		<video width="300" height="240" controls="controls" >
 			<source src="video/echo-hereweare.mp4" type="video/mp4">
 			<object data="" width="320" height="240"><embed width="320" height="240" src="video/echo-hereweare.mp4"></object>
 		</video>
@@ -31,9 +32,9 @@
           <p>This week will get basics of testing and other activities</p>
         </article>
       </li>
-      <li class="one_third">
+      <li class="one_half first" style="padding-left: 10px;">
         <article>
-        <video width="320" height="240" controls="controls" >
+        <video width="300" height="240" controls="controls" >
 			<source src="video/echo-hereweare.mp4" type="video/mp4">
 			<object data="" width="320" height="240"><embed width="320" height="240" src="video/echo-hereweare.mp4"></object>
 		</video>
@@ -41,9 +42,9 @@
           <p>This week will get basics of testing and other activities</p>
         </article>
       </li>
-      <li class="one_third first">
+      <li class="one_half">
         <article>
-		<video width="320" height="240" controls="controls" >
+		<video width="300" height="240" controls="controls" >
 			<source src="video/echo-hereweare.mp4" type="video/mp4">
 			<object data="" width="320" height="240"><embed width="320" height="240" src="video/echo-hereweare.mp4"></object>
 		</video>
@@ -51,9 +52,9 @@
           <p>This week will get basics of testing and other activities</p>
         </article>
       </li>
-      <li class="one_third">
+      <li class="one_half first" style="padding-left: 10px;">
         <article>
-        <video width="320" height="240" controls="controls" >
+        <video width="300" height="240" controls="controls" >
 			<source src="video/echo-hereweare.mp4" type="video/mp4">
 			<object data="" width="320" height="240"><embed width="320" height="240" src="video/echo-hereweare.mp4"></object>
 		</video>
@@ -61,9 +62,9 @@
           <p>This week will get basics of testing and other activities</p>
         </article>
       </li>
-      <li class="one_third">
+      <li class="one_half">
         <article>
-		<video width="320" height="240" controls="controls" >
+		<video width="300" height="240" controls="controls" >
 			<source src="video/echo-hereweare.mp4" type="video/mp4">
 			<object data="" width="320" height="240"><embed width="320" height="240" src="video/echo-hereweare.mp4"></object>
 		</video>
@@ -72,14 +73,36 @@
         </article>
       </li>
     </ul>
-    <div class="clear"></div>
-  </section>
+  </div>
+   <div class="content one_third" >
+      <div id="comments" style="border: 2px solid black; border-radius: 6px;padding: 15px;background-color: grey;width: 100%;">
+      <form ng-submit="registerLogin()">
+      
+       <div >
+         <fieldset>
+         <h3 style="font-weight: bold; color: white;">Enroll Courses</h3>
+         <label style="color: white; font-weight: bold; display: none;" id="divlancingconfirmaton">{{ ConfirmationMessage }}</label>
+          <input class="btmspace-15" type="text" name="username" id="username" value="" ng-model="username" placeholder="User Name *" style="font-weight: bold;" required>
+          <input class="btmspace-15" type="password" name="userpassword" id="userpassword" value="" ng-model="userpassword" placeholder="Password *" style="font-weight: bold;" required>
+         <input class="btmspace-15" type="text" value="" name="firstname" id="firstname" ng-model="firstname" placeholder="First Name *" style="font-weight: bold;" required>
+         <input class="btmspace-15" type="text" name="lastname" id="lastname" value="" size="40" ng-model="lastname" placeholder="Last Name *" style="font-weight: bold;" required>
+         <input class="btmspace-15" type="email" name="usermail" id="usermail" value="" ng-model="usermail" placeholder="Mail*" style="font-weight: bold;" required>
+         <input class="btmspace-15" type="number" name="phonenumber" id="phonenumber" value="" ng-model="phone" placeholder="Phone No.*" style="font-weight: bold;" required>
+         <textarea class="btmspace-15" name="comment" id="comment" cols="25" rows="4" maxlength="2000" ng-model="usercomments" style="font-weight: bold;" placeholder="Your Expectations *" required></textarea>
+         <input class="btmspace-50" type="submit" name="submit" value="Submit" style="color: #ffffff;background-color: #00ADEF;width: 50px;"/>
+         <input class="btmspace-50" type="reset" name="reset" value="Cancel" style="color: #ffffff;background-color: #00ADEF;width: 50px;"/>
+         </fieldset>
+          </div>
+          </form>
+      </div>
+   </div>
+   </main>
 </div>
 
-
+<!-- 
 <div class="wrapper row1" style="height: 100%">
   <main class="hoc container clear"> 
-    <!-- main body -->
+    main body
     <div class="sidebar one_third first"> 
    <div style="border: 2px solid #0f1d79;  border-radius: 12px; background-color: #0f1d79;" align="center">  <h3 style="color: white;">More Info</h3></div>
       <div style="border: 2px solid #0f1d79; border-radius: 6px;padding: 15px;">   
@@ -136,10 +159,10 @@
           </form>
       </div>
     </div>
-    <!-- / main body -->
+    / main body
     <div class="clear"></div>
   </main>
-</div>
+</div> -->
 </div>
 <!-- <div class="wrapper row1" id="htmlfooter" style="bottom: 0px; position: fixed;">
 footer contents start here

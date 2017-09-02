@@ -6,54 +6,44 @@
 </div>
 <div ng-controller="ContactUsController">
 
-<div class="wrapper bgded overlay light" style="height: 100%; background-color: gray;">
+<div class="wrapper bgded overlay light" style="height: 100%; ">
 
   <main class="hoc container clear"> 
     <!-- main body -->
-    <div class="sidebar one_third first"> 
-    <div style="border: 2px solid #0f1d79;  border-radius: 12px; background-color: #0f1d79;" align="center">  <h3 style="color: white;">Contact Details</h3></div>
-      <div style="border: 2px solid #0f1d79; border-radius: 6px;padding: 15px;">
-      <nav class="sdb_holder">
-       <ul class="nospace">
-       <li> Name: Sumith Jain </li>
-        <li>Contact Number: +1- 609-613-7893</li>
-        <li>Email: support@remoteqamentors.com</li>
-      </ul>
-      </nav>
-      <p style="font: bold;"> Note: Mentorship program available only for people living in USA & Canada.</p>
-      </div>
-    </div>
-    <div class="content two_third"> 
-    <div style="border: 2px solid #0f1d79;  border-radius: 12px; background-color: #0f1d79; " align="center">  <h3 style="color: white;">Any Suggestion</h3></div>
-      <div id="comments" style="border: 2px solid #0f1d79; border-radius: 6px;padding: 15px;">
+    <div class="two_third first"> 
+      <div id="comments">
         <form ng-submit="addsuggestion()">
-        <div class="content two_third" style="display: none;" id="divconfirmaton">
-            <label style="color: blue; font-weight: bold;">{{ ConfirmationMessage }}</label>
-          </div>
-          <div class="one_third first">
-            <label for="name">Name <span>*</span></label>
-            <input type="text" name="name" id="name" value="" size="22" ng-model="name" required>
-          </div>
-          <div class="one_third">
-            <label for="usermail">Mail <span>*</span></label>
-            <input type="email" name="usermail" id="usermail" value="" size="22" ng-model="usermail" required>
-          </div>
-          <div class="one_third">
-            <label for="phonenumber">Phone No. <span>*</span></label>
-            <input type="number" name="phonenumber" id="phonenumber" value="" size="22" ng-model="phone" required>
-          </div>
-          <div class="block clear">
-            <label for="comment">Your Comment</label>
-            <textarea name="comment" id="comment" cols="25" rows="10" maxlength="2000" ng-model="usercomments"></textarea>
-          </div>
-          <div>
-            <input type="submit" name="submit" value="Submit Form" style="color: #ffffff;background-color: #00ADEF;"/>
-            &nbsp;
-            <input type="reset" name="reset" value="Reset Form" style="color: #ffffff;background-color: #00ADEF;"/>
+        <div >
+         <fieldset>
+         <h3><i class="fa fa-envelope" style="color: rgb(68, 68, 68); font-size: 24px !important; margin-right: 6px;"><span style="font-weight: bold;"> Any Questions?</span></i></h3>
+         <label style="color: blue; font-weight: bold; display: none;" id="divconfirmaton">{{ ConfirmationMessage }}</label>
+         <input class="btmspace-15" type="text" value="" name="name" id="name" ng-model="name" placeholder="Name *" style="font-weight: bold;" required>
+         <input class="btmspace-15" type="email" name="usermail" id="usermail" value="" ng-model="usermail" placeholder="Mail*" style="font-weight: bold;" required>
+         <input class="btmspace-15" type="number" name="phonenumber" id="phonenumber" value="" ng-model="phone" placeholder="Phone No. *" style="font-weight: bold;" required>
+         <textarea class="btmspace-15" name="comment" id="comment" cols="25" rows="10" maxlength="2000" ng-model="usercomments" style="font-weight: bold;" placeholder="Your Comment" required></textarea>
+         <div align="right"> <input type="submit" name="submit" value="Submit" style="color: #ffffff;background-color: #00ADEF;"/>&nbsp;
+         <input type="reset" name="reset" value="Cancel" style="color: #ffffff;background-color: #00ADEF;"/></div>
+         </fieldset>
           </div>
         </form>
       </div>
     </div>
+    <div class="content one_third"> 
+    <div >  <h3 style="font-weight: bold;">Contact Details</h3></div>
+      <div>
+      <nav class="sdb_holder">
+       <ul class="nospace">
+       <li> <span style="font-weight: bold;"> Name: Sumith Jain </span></li>
+        <li><span style="font-weight: bold;">Contact Number: +1- 609-613-7893</span></li>
+        <li><span style="font-weight: bold;">Email: support@remoteqamentors.com</span></li>
+      </ul>
+      </nav>
+      <p style="font-weight: bold; color: orange;"> Note: Mentorship program available only for people living in USA & Canada.</p>
+      </div>
+    </div>
+     
+    
+   
     <div class="clear"></div>
   </main>
 </div>
