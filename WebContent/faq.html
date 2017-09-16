@@ -1,71 +1,90 @@
 <div id="top" >
 <div class="wrapper row1" id="htmlheader" style="position: fixed;top: 0;right: 0;left: 0;width: 100%;z-index: 1030">
 <!-- header contents start here -->
-<div ng-include="'header.html'"></div>
+<!-- <div ng-include="'header.html'"></div> -->
+<header id="fh5co-header" role="banner" >
+		<nav class="navbar navbar-default" role="navigation" >
+			<div class="container-fluid">
+				<div class="navbar-header"> 
+				<!-- Mobile Toggle Menu Button -->
+				<a class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#fh5co-navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+				<a class="navbar-brand" href="#/">Remote QA Mentors
+				<!-- <img src="images/demo/backgrounds/logo123.jpg" alt="logo"  class="img-responsive img-rounded"/> -->
+				</a>
+				</div>
+				<div id="fh5co-navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+					<li><a href="#/home" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"><span class="headerclass">Home<span class="border"></span></span></a></li>
+					<li><a href="#/aboutus" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"><span class="headerclass">About Us<span class="border"></span></span></a></li>
+					<li><a href="#/freelancingcourse" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"><span class="headerclass">FreeLancing Course<span class="border"></span></span></a></li>
+					<li><a href="#/recordedwebtraining" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"><span class="headerclass">Recorded Web Training<span class="border"></span></span></a></li>
+					<li class="active"><a href="#/faq" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"><span class="headerclass">FAQ<span class="border"></span></span></a></li>
+					<li><a href="#/contactus" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"><span class="headerclass">Contact Us<span class="border"></span></span></a></li>
+					<li ><a href="#/requestfordemo" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"> <span class="headerclass">Demo Request<span class="border"></span></span></a></li> 
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
 </div>
 <div ng-controller="FAQController">
 
-<div class="wrapper bgded overlay light"  style="height: 100%;background-color: gray;">
+<div class="wrapper bgded overlay light"  style="height: 100%;width: 100%;">
   <main class="hoc container clear"> 
-  <div style="border: 2px solid #0f1d79;  border-radius: 12px; background-color: #0f1d79;" align="center">  <h4 style="color: white;font-weight: bold;">Frequently Asked Questions (FAQ's)</h4>
-  <p  align="center" style="color: white;">We would like to hear from you too, in case you have any doubts</p>
+  <div  align="center">  <h4 class="faqheader">Frequently Asked Questions (FAQ's)</h4>
+  <p  align="center" class="faqcontents">We would like to hear from you too, in case you have any doubts</p>
   </div>
-      <div style="border: 2px solid #0f1d79; border-radius: 6px;padding: 15px;">
-<!--         <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h4 class="fh5co-page-heading-lead">Frequently Asked Questions (FAQ's)<span class="fh5co-border"></span></h4>
-                  <p style="height: 25px; min-height: 50px; ">We would like to hear from you too, in case you have any doubts</p>
-                </div>
-            </div>
-        </div>
- -->
-<label >Q:I am non IT professional, can I still do it?</label>
-<p >A: YES. The actual testing is very simple as in testing basic apps and websites. The only thing you will need some time to master is reporting a bug properly &ndash; Taking videos, capturing logs and executing test cases properly. Our training will help you overcome all of it. In fact we know many Non IT friends doing great here.</p>
+      <div>
+<label class="faqheader">Q: I am non IT professional, can I still do it?</label>
+<p class="faqcontents">A: YES. The actual testing is very simple as in testing basic apps and websites. The only thing you will need some time to master is reporting a bug properly &ndash; Taking videos, capturing logs and executing test cases properly. Our training will help you overcome all of it. In fact we know many Non IT friends doing great here.</p>
 
-<label >Q:I am an experienced QA Professional; do I still need to take the training?</label>
-<p >A: YES. It&rsquo;s not that you can&rsquo;t do this on your own but the learning curve, complex platform and just the initial overwhelm of understanding everything and putting in place will be too time consuming and frustrating. This training is specifically designed to address all these aspects. So it&rsquo;s your own call. We have had 8+ years&sbquo; experienced QA professionals who joined us as they knew about it but couldn&rsquo;t figure it out properly.</p>
+<label class="faqheader">Q: I am an experienced QA Professional; do I still need to take the training?</label>
+<p class="faqcontents">A: YES. It&rsquo;s not that you can&rsquo;t do this on your own but the learning curve, complex platform and just the initial overwhelm of understanding everything and putting in place will be too time consuming and frustrating. This training is specifically designed to address all these aspects. So it&rsquo;s your own call. We have had 8+ years&sbquo; experienced QA professionals who joined us as they knew about it but couldn&rsquo;t figure it out properly.</p>
 
-<label >Q: Is this a QA methodologies or theory training?</label>
-<p >A: NO. This is not a full blown QA training as such. It is also not just theory training with dummy project. This is a very practical, straight forward and specific training to help you succeed in Freelancing on crowdsourcing platforms. We could add QA training and make it more complex but it is not needed for what this course was designed for.</p>
+<label class="faqheader">Q: Is this a QA methodologies or theory training?</label>
+<p class="faqcontents">A: NO. This is not a full blown QA training as such. It is also not just theory training with dummy project. This is a very practical, straight forward and specific training to help you succeed in Freelancing on crowdsourcing platforms. We could add QA training and make it more complex but it is not needed for what this course was designed for.</p>
 
-<label >Q: Will I get a JOB with this training?</label>
-<p >A: YES/NO/MAYBE. I really don&rsquo;t have an answer for such a question. You may end up doing this Full time or land up in Contract work with your freelancing experience. The projects that you work on will give you a lot of exposure and learning. You can use that in interviews and talk about kind of projects you have been handling. This is also really great especially if you are starting with QA career.</p>
+<label class="faqheader">Q: Will I get a JOB with this training?</label>
+<p class="faqcontents">A: YES/NO/MAYBE. I really don&rsquo;t have an answer for such a question. You may end up doing this Full time or land up in Contract work with your freelancing experience. The projects that you work on will give you a lot of exposure and learning. You can use that in interviews and talk about kind of projects you have been handling. This is also really great especially if you are starting with QA career.</p>
 
-<label >Q: Is there any certification for this course?</label>
-<p >A: NO. This is not a Certification course. This course is personally developed after working extensively for 2 years on crowdsourcing platforms and also there is no way for us to certify anything. All we are offering here is our personal experience and mentorship to help you realize dream of working from home.</p>
+<label class="faqheader">Q: Is there any certification for this course?</label>
+<p class="faqcontents">A: NO. This is not a Certification course. This course is personally developed after working extensively for 2 years on crowdsourcing platforms and also there is no way for us to certify anything. All we are offering here is our personal experience and mentorship to help you realize dream of working from home.</p>
 
-<label >Q: Is there any guarantee that I will get any projects?</label>
-<p >A: YES. There are lot of projects in US, Canada & UK. So there is no doubt that you will get a lot of projects if you follow the training and also assignments. We will refund you if you don&rsquo;t get any projects.</p>
+<label class="faqheader">Q: Is there any guarantee that I will get any projects?</label>
+<p class="faqcontents">A: YES. There are lot of projects in US, Canada & UK. So there is no doubt that you will get a lot of projects if you follow the training and also assignments. We will refund you if you don&rsquo;t get any projects.</p>
 
-<label >Q: How much time will I need to get Projects?</label>
-<p >A: We have seen some of our students get project in first four weeks of the course itself. But to be fair, you will need to give yourself 6-8 weeks to start seeing frequent projects. Most of our students start getting projects within 4-5 weeks itself.</p>
+<label class="faqheader">Q: How much time will I need to get Projects?</label>
+<p class="faqcontents">A: We have seen some of our students get project in first four weeks of the course itself. But to be fair, you will need to give yourself 6-8 weeks to start seeing frequent projects. Most of our students start getting projects within 4-5 weeks itself.</p>
 
-<label >Q: Is there any bidding involved? I mean how they will give the projects?</label>
-<p >A: NO. There is no bidding here. They will send projects to every registered user, see if you are a potential candidate to be given more projects and they will send out invites to work on a project. They have their internal rating and statistics to judge your work.</p>
+<label class="faqheader">Q: Is there any bidding involved? I mean how they will give the projects?</label>
+<p class="faqcontents">A: NO. There is no bidding here. They will send projects to every registered user, see if you are a potential candidate to be given more projects and they will send out invites to work on a project. They have their internal rating and statistics to judge your work.</p>
 
-<label >Q: What is the $499 fee for?</label>
-<p >A: It is for the training and mentorship. This fee is one time and it covers the course materials, Assignments evaluation and teaching all the tools & software needed to become successful in freelancing.</p>
+<label class="faqheader">Q: What is the $499 fee for?</label>
+<p class="faqcontents">A: It is for the training and mentorship. This fee is one time and it covers the course materials, Assignments evaluation and teaching all the tools & software needed to become successful in freelancing.</p>
 
-<label >Q: Do I have to compulsory pay?</label>
-<p >A: YES. First class is FREE. But to take complete course (6 classes) you have to pay.</p>
+<label class="faqheader">Q: Do I have to compulsory pay?</label>
+<p class="faqcontents">A: YES. First class is FREE. But to take complete course (6 classes) you have to pay.</p>
 
-<label >Q: Is there any other hidden fees?</label>
-<p >A: NO. The tools we teach are mostly free or less than $10. Also, this course is about making money and not spending money! So, don&rsquo;t worry, there will be no fees ever!</p>
+<label class="faqheader">Q: Is there any other hidden fees?</label>
+<p class="faqcontents">A: NO. The tools we teach are mostly free or less than $10. Also, this course is about making money and not spending money! So, don&rsquo;t worry, there will be no fees ever!</p>
 
-<label >Q: I have been cheated before and am skeptical about Work from Home as most are scams. How can I trust you?</label>
-<p >A: We have given all the screen shots, explanation, working links for actual articles on forum that you can read and verify. Also, we have made first class free. We do not know what else we can do to convince if you are not already. In fact, we don&rsquo;t want to convince you. Our job is to show you proofs and make a valid case. It is really on you to take further action or not. We are happy to help but are not going to be pushy. All we want to say is if this interests you take a leap of faith and give yourself a chance!</p>
+<label class="faqheader">Q: I have been cheated before and am skeptical about Work from Home as most are scams. How can I trust you?</label>
+<p class="faqcontents">A: We have given all the screen shots, explanation, working links for actual articles on forum that you can read and verify. Also, we have made first class free. We do not know what else we can do to convince if you are not already. In fact, we don&rsquo;t want to convince you. Our job is to show you proofs and make a valid case. It is really on you to take further action or not. We are happy to help but are not going to be pushy. All we want to say is if this interests you take a leap of faith and give yourself a chance!</p>
 
-<label >Q: Can I speak to someone who has taken these classes and able to make money?</label>
-<p >A: YES. Send us your contact info or email and we will get in touch with someone who has taken this program and are actually making money from home.</p>
+<label class="faqheader">Q: Can I speak to someone who has taken these classes and able to make money?</label>
+<p class="faqcontents">A: YES. Send us your contact info or email and we will get in touch with someone who has taken this program and are actually making money from home.</p>
 
-<label >Q: I need more information, Can I talk to someone before I invest in this program?</label>
-<p >A: Sure. Please fill in the form and someone from our team will get in touch with you.</p>
+<label class="faqheader">Q: I need more information, Can I talk to someone before I invest in this program?</label>
+<p class="faqcontents">A: Sure. Please fill in the form and someone from our team will get in touch with you.</p>
 
  </div>
 </main>
 </div>
+
+<div class="wrapper row4" style="z-index: 1032;">
+ <div ng-include="'footer.html'"></div>
 </div>
-<a id="backtotop" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"><i class="fa fa-chevron-up"></i></a>
+</div>
+<a id="backtotop" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;" style="z-index: 1042;"><i class="fa fa-chevron-up"></i></a>
 <!-- JAVASCRIPTS -->
 </div>

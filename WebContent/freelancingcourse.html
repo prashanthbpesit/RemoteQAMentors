@@ -1,10 +1,34 @@
 <div id="pagetop">
 <div class="wrapper row1" id="htmlheader" style="position: fixed;top: 0;right: 0;left: 0;width: 100%;z-index: 1030">
 <!-- header contents start here -->
-<div ng-include="'header.html'"></div>
+<!-- <div ng-include="'header.html'"></div> -->
+<header id="fh5co-header" role="banner" >
+		<nav class="navbar navbar-default" role="navigation" >
+			<div class="container-fluid">
+				<div class="navbar-header"> 
+				<!-- Mobile Toggle Menu Button -->
+				<a class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#fh5co-navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+				<a class="navbar-brand" href="#/">Remote QA Mentors
+				<!-- <img src="images/demo/backgrounds/logo123.jpg" alt="logo"  class="img-responsive img-rounded"/> -->
+				</a>
+				</div>
+				<div id="fh5co-navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+					<li><a href="#/home" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"><span class="headerclass">Home<span class="border"></span></span></a></li>
+					<li><a href="#/aboutus" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"><span class="headerclass">About Us<span class="border"></span></span></a></li>
+					<li class="active"><a href="#/freelancingcourse" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"><span class="headerclass">FreeLancing Course<span class="border"></span></span></a></li>
+					<li><a href="#/recordedwebtraining" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"><span class="headerclass">Recorded Web Training<span class="border"></span></span></a></li>
+					<li><a href="#/faq" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"><span class="headerclass">FAQ<span class="border"></span></span></a></li>
+					<li><a href="#/contactus" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"><span class="headerclass">Contact Us<span class="border"></span></span></a></li>
+					<li ><a href="#/requestfordemo" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"> <span class="headerclass">Demo Request<span class="border"></span></span></a></li> 
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
 </div>
 <div ng-controller="FreeLancingController">
-<div class="wrapper bgded overlay light"  style="height: 100%;">
+<div class="wrapper bgded overlay light"  style="height: 100%;width: 100%;">
  <main class="hoc container clear"> 
  <!-- <div class="sectiontitle">
       <h3 class="heading">Freelancing Courses</h3>
@@ -18,8 +42,8 @@
 			<source src="video/echo-hereweare.mp4" type="video/mp4">
 			<object data="" width="320" height="240"><embed width="320" height="240" src="video/echo-hereweare.mp4"></object>
 		</video>
-          <h6 class="heading">Training week 1</h6>
-          <p>This week will get basics of testing and other activities </p>
+          <h6 class="videosheader">Training week 1</h6>
+          <p class="videoscontents">This week will get basics of testing and other activities </p>
         </article>
       </li>
       <li class="one_half">
@@ -28,8 +52,8 @@
 			<source src="video/echo-hereweare.mp4" type="video/mp4">
 			<object data="" width="320" height="240"><embed width="320" height="240" src="video/echo-hereweare.mp4"></object>
 		</video>
-          <h6 class="heading">Training week 2</h6>
-          <p>This week will get basics of testing and other activities</p>
+          <h6 class="videosheader">Training week 2</h6>
+          <p class="videoscontents">This week will get basics of testing and other activities</p>
         </article>
       </li>
       <li class="one_half first" style="padding-left: 10px;">
@@ -38,8 +62,8 @@
 			<source src="video/echo-hereweare.mp4" type="video/mp4">
 			<object data="" width="320" height="240"><embed width="320" height="240" src="video/echo-hereweare.mp4"></object>
 		</video>
-          <h6 class="heading">Training week 3</h6>
-          <p>This week will get basics of testing and other activities</p>
+          <h6 class="videosheader">Training week 3</h6>
+          <p class="videoscontents">This week will get basics of testing and other activities</p>
         </article>
       </li>
       <li class="one_half">
@@ -48,8 +72,8 @@
 			<source src="video/echo-hereweare.mp4" type="video/mp4">
 			<object data="" width="320" height="240"><embed width="320" height="240" src="video/echo-hereweare.mp4"></object>
 		</video>
-          <h6 class="heading">Training week 4</h6>
-          <p>This week will get basics of testing and other activities</p>
+          <h6 class="videosheader">Training week 4</h6>
+          <p class="videoscontents">This week will get basics of testing and other activities</p>
         </article>
       </li>
       <li class="one_half first" style="padding-left: 10px;">
@@ -58,8 +82,8 @@
 			<source src="video/echo-hereweare.mp4" type="video/mp4">
 			<object data="" width="320" height="240"><embed width="320" height="240" src="video/echo-hereweare.mp4"></object>
 		</video>
-          <h6 class="heading">Training week 5</h6>
-          <p>This week will get basics of testing and other activities</p>
+          <h6 class="videosheader">Training week 5</h6>
+          <p class="videoscontents">This week will get basics of testing and other activities</p>
         </article>
       </li>
       <li class="one_half">
@@ -68,8 +92,8 @@
 			<source src="video/echo-hereweare.mp4" type="video/mp4">
 			<object data="" width="320" height="240"><embed width="320" height="240" src="video/echo-hereweare.mp4"></object>
 		</video>
-          <h6 class="heading">Training week 6</h6>
-          <p>This week will get basics of testing and other activities</p>
+          <h6 class="videosheader">Training week 6</h6>
+          <p class="videoscontents">This week will get basics of testing and other activities</p>
         </article>
       </li>
     </ul>
@@ -89,8 +113,8 @@
          <input class="btmspace-15" type="email" name="usermail" id="usermail" value="" ng-model="usermail" placeholder="Mail*" style="font-weight: bold;" required>
          <input class="btmspace-15" type="number" name="phonenumber" id="phonenumber" value="" ng-model="phone" placeholder="Phone No.*" style="font-weight: bold;" required>
          <textarea class="btmspace-15" name="comment" id="comment" cols="25" rows="4" maxlength="2000" ng-model="usercomments" style="font-weight: bold;" placeholder="Your Expectations *" required></textarea>
-         <input class="btmspace-50" type="submit" name="submit" value="Submit" style="color: #ffffff;background-color: #00ADEF;width: 50px;"/>
-         <input class="btmspace-50" type="reset" name="reset" value="Cancel" style="color: #ffffff;background-color: #00ADEF;width: 50px;"/>
+         <input class="btmspace-50" type="submit" name="submit" value="Submit" style="color: #ffffff;background-color: #00ADEF;width: 100px;border-radius: 6px;"/>
+         <input class="btmspace-50" type="reset" name="reset" value="Cancel" style="color: #ffffff;background-color: #00ADEF;width: 100px;border-radius: 6px;"/>
          </fieldset>
           </div>
           </form>
@@ -98,76 +122,14 @@
    </div>
    </main>
 </div>
-
-<!-- 
-<div class="wrapper row1" style="height: 100%">
-  <main class="hoc container clear"> 
-    main body
-    <div class="sidebar one_third first"> 
-   <div style="border: 2px solid #0f1d79;  border-radius: 12px; background-color: #0f1d79;" align="center">  <h3 style="color: white;">More Info</h3></div>
-      <div style="border: 2px solid #0f1d79; border-radius: 6px;padding: 15px;">   
-      <nav class="sdb_holder">
-       <ul class="nospace">
-       <li> Name: Sumith Jain </li>
-        <li>Contact Number: +1- 609-613-7893</li>
-        <li>Email: support@remoteqamentors.com</li>
-      </ul>
-      </nav>
-      <p style="font: bold;"> Note: Mentorship program available only for people living in USA & Canada.</p>
-    </div>
-    </div>
-    <div class="content two_third"> 
-     <div style="border: 2px solid #0f1d79;  border-radius: 12px; background-color: #0f1d79; " align="center">  <h3 style="color: white;">To enroll into Free Lancing Courses </h3></div>
-      <div id="comments" style="border: 2px solid #0f1d79; border-radius: 6px;padding: 15px;">
-      <form ng-submit="registerLogin()">
-      	<div class="content two_third" style="display: none;" id="divlancingconfirmaton">
-            <label style="color: blue; font-weight: bold;">{{ ConfirmationMessage }}</label>
-          </div>
-     	 <div class="one_third first">
-            <label for="username">User Name <span>*</span></label>
-            <input type="text" name="username" id="username" value="" size="40" ng-model="username" required>
-          </div>
-          <div class="one_third">
-            <label for="userpassword">Password <span>*</span></label>
-            <input type="password" name="userpassword" id="userpassword" value="" size="40" ng-model="userpassword" required>
-          </div>
-          <div class="one_third first">
-            <label for="firstname">First Name <span>*</span></label>
-            <input type="text" name="firstname" id="firstname" value="" size="40" ng-model="firstname" required>
-          </div>
-          <div class="one_third">
-            <label for="lastname">Last Name <span>*</span></label>
-            <input type="text" name="lastname" id="lastname" value="" size="40" ng-model="lastname" required>
-          </div>
-          <div class="one_third first">
-            <label for="usermail">Mail <span>*</span></label>
-            <input type="email" name="usermail" id="usermail" value="" size="40" ng-model="usermail" required>
-          </div>
-          <div class="one_third">
-            <label for="phonenumber">Phone No.<span>*</span></label>
-            <input type="number" name="phonenumber" id="phonenumber" value="" size="30" ng-model="phone" required >
-          </div>
-          <div class="block clear">
-            <label for="comment">Your Expectations</label>
-            <textarea name="comment" id="comment" title="what do you expect on us" cols="25" rows="10" maxlength="2000" ng-model="usercomments"></textarea>
-          </div>
-          <div>
-            <input type="submit" name="submit" value="Submit" style="color: #ffffff;background-color: #00ADEF;"/>
-            &nbsp;
-            <input type="reset" name="reset" value="Reset Form" style="color: #ffffff;background-color: #00ADEF;"/>
-          </div>
-          </form>
-      </div>
-    </div>
-    / main body
-    <div class="clear"></div>
-  </main>
-</div> -->
+<div class="wrapper row4" style="z-index: 1032;">
+ <div ng-include="'footer.html'"></div>
+</div>
 </div>
 <!-- <div class="wrapper row1" id="htmlfooter" style="bottom: 0px; position: fixed;">
 footer contents start here
 <div ng-include="'footer.html'"></div>
 </div> -->
-<a id="backtotop" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"><i class="fa fa-chevron-up"></i></a>
+<a id="backtotop" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;" style="z-index: 1033;"><i class="fa fa-chevron-up"></i></a>
 <!-- JAVASCRIPTS -->
 </div>

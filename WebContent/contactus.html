@@ -2,7 +2,31 @@
 
 <div class="wrapper row1" id="htmlheader" style="position: fixed;top: 0;right: 0;left: 0;width: 100%;z-index: 1030">
 <!-- header contents start here -->
-<div ng-include="'header.html'"></div>
+<!-- <div ng-include="'header.html'"></div> -->
+<header id="fh5co-header" role="banner" >
+		<nav class="navbar navbar-default" role="navigation" >
+			<div class="container-fluid">
+				<div class="navbar-header"> 
+				<!-- Mobile Toggle Menu Button -->
+				<a class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#fh5co-navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+				<a class="navbar-brand" href="#/">Remote QA Mentors
+				<!-- <img src="images/demo/backgrounds/logo123.jpg" alt="logo"  class="img-responsive img-rounded"/> -->
+				</a>
+				</div>
+				<div id="fh5co-navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+					<li><a href="#/home" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"><span class="headerclass">Home<span class="border"></span></span></a></li>
+					<li><a href="#/aboutus" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"><span class="headerclass">About Us<span class="border"></span></span></a></li>
+					<li><a href="#/freelancingcourse" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"><span class="headerclass">FreeLancing Course<span class="border"></span></span></a></li>
+					<li><a href="#/recordedwebtraining" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"><span class="headerclass">Recorded Web Training<span class="border"></span></span></a></li>
+					<li><a href="#/faq" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"><span class="headerclass">FAQ<span class="border"></span></span></a></li>
+					<li class="active"><a href="#/contactus" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"><span class="headerclass">Contact Us<span class="border"></span></span></a></li>
+					<li ><a href="#/requestfordemo" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"> <span class="headerclass">Demo Request<span class="border"></span></span></a></li> 
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
 </div>
 <div ng-controller="ContactUsController">
 
@@ -15,30 +39,30 @@
         <form ng-submit="addsuggestion()">
         <div >
          <fieldset>
-         <h3><i class="fa fa-envelope" style="color: rgb(68, 68, 68); font-size: 24px !important; margin-right: 6px;"><span style="font-weight: bold;"> Any Questions?</span></i></h3>
+         <h3><i class="fa fa-envelope" style="color: rgb(68, 68, 68); font-size: 24px !important; margin-right: 6px;"><span class="aboutlinkcontentred"> Any Questions?</span></i></h3>
          <label style="color: blue; font-weight: bold; display: none;" id="divconfirmaton">{{ ConfirmationMessage }}</label>
          <input class="btmspace-15" type="text" value="" name="name" id="name" ng-model="name" placeholder="Name *" style="font-weight: bold;" required>
          <input class="btmspace-15" type="email" name="usermail" id="usermail" value="" ng-model="usermail" placeholder="Mail*" style="font-weight: bold;" required>
          <input class="btmspace-15" type="number" name="phonenumber" id="phonenumber" value="" ng-model="phone" placeholder="Phone No. *" style="font-weight: bold;" required>
-         <textarea class="btmspace-15" name="comment" id="comment" cols="25" rows="10" maxlength="2000" ng-model="usercomments" style="font-weight: bold;" placeholder="Your Comment" required></textarea>
-         <div align="right"> <input type="submit" name="submit" value="Submit" style="color: #ffffff;background-color: #00ADEF;"/>&nbsp;
-         <input type="reset" name="reset" value="Cancel" style="color: #ffffff;background-color: #00ADEF;"/></div>
+         <textarea class="btmspace-15" name="comment" id="comment" cols="25" rows="5" maxlength="2000" ng-model="usercomments" style="font-weight: bold;" placeholder="Your Comment" required></textarea>
+         <div align="right"> <input class="btmspace-15" type="submit" name="submit" value="Submit" style="color: #ffffff;background-color: #00ADEF;width: 100px;border-radius: 6px;"/>&nbsp;
+         <input class="btmspace-15" type="reset" name="reset" value="Cancel" style="color: #ffffff;background-color: #00ADEF;width: 100px;border-radius: 6px;"/></div>
          </fieldset>
           </div>
         </form>
       </div>
     </div>
     <div class="content one_third"> 
-    <div >  <h3 style="font-weight: bold;">Contact Details</h3></div>
+    <div >  <h3 class="aboutlinkcontentred">Contact Details</h3></div>
       <div>
       <nav class="sdb_holder">
        <ul class="nospace">
-       <li> <span style="font-weight: bold;"> Name: Sumith Jain </span></li>
-        <li><span style="font-weight: bold;">Contact Number: +1- 609-613-7893</span></li>
-        <li><span style="font-weight: bold;">Email: support@remoteqamentors.com</span></li>
+       <li> <span class="faqheader"> Name: </span> <span class="faqcontents">  Sumith Jain </span></li>
+        <li><span class="faqheader">Contact Number:</span> <span class="faqcontents">  +1- 609-613-7893</span></li>
+        <li><span class="faqheader">Email: </span> <span class="faqcontents"> support@remoteqamentors.com</span></li>
       </ul>
       </nav>
-      <p style="font-weight: bold; color: orange;"> Note: Mentorship program available only for people living in USA & Canada.</p>
+      <p class="aboutlinkred"> Note: Mentorship program available only for people living in USA & Canada.</p>
       </div>
     </div>
      
@@ -47,12 +71,15 @@
     <div class="clear"></div>
   </main>
 </div>
+<div class="wrapper row4" style="z-index: 1032;">
+ <div ng-include="'footer.html'"></div>
+</div>
 </div>
 
 <!-- <div class="wrapper row1" id="htmlfooter" style="bottom: 0px; position: fixed;">
 footer contents start here
 <div ng-include="'footer.html'"></div>
 </div> -->
-<a id="backtotop" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"><i class="fa fa-chevron-up"></i></a>
+<a id="backtotop" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;" style="z-index: 1033;"><i class="fa fa-chevron-up"></i></a>
 <!-- JAVASCRIPTS -->
 </div>

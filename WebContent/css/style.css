@@ -5973,3 +5973,24 @@ a > img.fh5co-align-center {
   margin-right: auto; }
 
 /*# sourceMappingURL=style.css.map */
+.faqheader{
+color: #000080; font-weight: bold;font-style: oblique;
+}/*#000080 navy blue,  #00ADEF; aqua*/
+.faqcontents{
+color: #54180B; font-weight: bold;font-style: oblique;
+}
+.videosheader{
+color: #000080;font-weight: bold;font-style: oblique;
+}
+.videoscontents{
+color: #54180B; font-weight: bold;font-style: oblique;
+}
+.aboutlinkred{
+	color: red;font-weight: bold;font-style: oblique;
+}
+.aboutlinkcontentred{
+	color: #FF00FF;font-weight: bold;font-style: oblique;
+}
+.headerclass{
+	color: blue;font-weight: bold;
+}

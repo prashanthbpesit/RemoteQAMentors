@@ -1,30 +1,131 @@
 <div id="top">
 <div class="wrapper row1" id="htmlheader" style="position: fixed;top: 0;right: 0;left: 0;width: 100%;z-index: 1030">
 <!-- header contents start here -->
-<div ng-include="'header.html'"></div>
+<!-- <div ng-include="'header.html'"></div> -->
+<header id="fh5co-header" role="banner" >
+		<nav class="navbar navbar-default" role="navigation" >
+			<div class="container-fluid">
+				<div class="navbar-header"> 
+				<!-- Mobile Toggle Menu Button -->
+				<a class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#fh5co-navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+				<a class="navbar-brand" href="#/">Remote QA Mentors
+				<!-- <img src="images/demo/backgrounds/logo123.jpg" alt="logo"  class="img-responsive img-rounded"/> -->
+				</a>
+				</div>
+				<div id="fh5co-navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+					<li><a href="#/home" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"><span class="headerclass">Home<span class="border"></span></span></a></li>
+					<li><a href="#/aboutus" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"><span class="headerclass">About Us<span class="border"></span></span></a></li>
+					<li><a href="#/freelancingcourse" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"><span class="headerclass">FreeLancing Course<span class="border"></span></span></a></li>
+					<li class="active"><a href="#/recordedwebtraining" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"><span class="headerclass">Recorded Web Training<span class="border"></span></span></a></li>
+					<li><a href="#/faq" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"><span class="headerclass">FAQ<span class="border"></span></span></a></li>
+					<li><a href="#/contactus" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"><span class="headerclass">Contact Us<span class="border"></span></span></a></li>
+					<li ><a href="#/requestfordemo" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"> <span class="headerclass">Demo Request<span class="border"></span></span></a></li> 
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
 </div>
 <div ng-controller="RecordedWebController">
-<div class="wrapper bgded overlay light"  style="height: 100%;background-color: gray;">
-  <article class="hoc container clear"> 
-    <div class="sectiontitle">
-      <h3 class="heading">Recorded Web Training</h3>
-      <p>Etiam euismod neque sapien eget suscipit justo pharetra id.</p>
-    </div>
-    <figure>
-      <ul class="nospace group logos">
-        <li class="one_quarter first"><a href="#"><img src="images/demo/222x100.png" alt=""></a></li>
-        <li class="one_quarter"><a href="#"><img src="images/demo/222x100.png" alt=""></a></li>
-        <li class="one_quarter"><a href="#"><img src="images/demo/222x100.png" alt=""></a></li>
-        <li class="one_quarter"><a href="#"><img src="images/demo/222x100.png" alt=""></a></li>
-      </ul>
-    </figure>
-  </article>
+<div class="wrapper bgded overlay light"  style="height: 100%;width: 100%;">
+ <main class="hoc container clear"> 
+ <!-- <div class="sectiontitle">
+      <h3 class="heading">Freelancing Courses</h3>
+      <p>How to earn extra income by Testing Apps & Websites</p>
+    </div> -->
+ <div class="two_third first"> 
+    <ul class="nospace group services">
+      <li class="one_half first" style="padding-left: 10px;">
+        <article>	
+        <video width="300" height="240" controls="controls" >
+			<source src="video/echo-hereweare.mp4" type="video/mp4">
+			<object data="" width="320" height="240"><embed width="320" height="240" src="video/echo-hereweare.mp4"></object>
+		</video>
+          <h6 class="videosheader">Training week 1</h6>
+          <p class="videoscontents">This week will get basics of testing and other activities </p>
+        </article>
+      </li>
+      <li class="one_half">
+        <article>
+		<video width="300" height="240" controls="controls" >
+			<source src="video/echo-hereweare.mp4" type="video/mp4">
+			<object data="" width="320" height="240"><embed width="320" height="240" src="video/echo-hereweare.mp4"></object>
+		</video>
+          <h6 class="videosheader">Training week 2</h6>
+          <p class="videoscontents">This week will get basics of testing and other activities</p>
+        </article>
+      </li>
+      <li class="one_half first" style="padding-left: 10px;">
+        <article>
+        <video width="300" height="240" controls="controls" >
+			<source src="video/echo-hereweare.mp4" type="video/mp4">
+			<object data="" width="320" height="240"><embed width="320" height="240" src="video/echo-hereweare.mp4"></object>
+		</video>
+          <h6 class="videosheader">Training week 3</h6>
+          <p class="videoscontents">This week will get basics of testing and other activities</p>
+        </article>
+      </li>
+      <li class="one_half">
+        <article>
+		<video width="300" height="240" controls="controls" >
+			<source src="video/echo-hereweare.mp4" type="video/mp4">
+			<object data="" width="320" height="240"><embed width="320" height="240" src="video/echo-hereweare.mp4"></object>
+		</video>
+          <h6 class="videosheader">Training week 4</h6>
+          <p class="videoscontents">This week will get basics of testing and other activities</p>
+        </article>
+      </li>
+      <li class="one_half first" style="padding-left: 10px;">
+        <article>
+        <video width="300" height="240" controls="controls" >
+			<source src="video/echo-hereweare.mp4" type="video/mp4">
+			<object data="" width="320" height="240"><embed width="320" height="240" src="video/echo-hereweare.mp4"></object>
+		</video>
+          <h6 class="videosheader">Training week 5</h6>
+          <p class="videoscontents">This week will get basics of testing and other activities</p>
+        </article>
+      </li>
+      <li class="one_half">
+        <article>
+		<video width="300" height="240" controls="controls" >
+			<source src="video/echo-hereweare.mp4" type="video/mp4">
+			<object data="" width="320" height="240"><embed width="320" height="240" src="video/echo-hereweare.mp4"></object>
+		</video>
+          <h6 class="videosheader">Training week 6</h6>
+          <p class="videoscontents">This week will get basics of testing and other activities</p>
+        </article>
+      </li>
+    </ul>
+  </div>
+   <div class="content one_third" >
+      <div id="comments" style="border: 2px solid black; border-radius: 6px;padding: 15px;background-color: grey;width: 100%;">
+      <form ng-submit="registerLogin()">
+      
+       <div >
+         <fieldset>
+         <h3 style="font-weight: bold; color: white;">Enroll Courses</h3>
+         <label style="color: white; font-weight: bold; display: none;" id="divlancingconfirmaton">{{ ConfirmationMessage }}</label>
+          <input class="btmspace-15" type="text" name="username" id="username" value="" ng-model="username" placeholder="User Name *" style="font-weight: bold;" required>
+          <input class="btmspace-15" type="password" name="userpassword" id="userpassword" value="" ng-model="userpassword" placeholder="Password *" style="font-weight: bold;" required>
+         <input class="btmspace-15" type="text" value="" name="firstname" id="firstname" ng-model="firstname" placeholder="First Name *" style="font-weight: bold;" required>
+         <input class="btmspace-15" type="text" name="lastname" id="lastname" value="" size="40" ng-model="lastname" placeholder="Last Name *" style="font-weight: bold;" required>
+         <input class="btmspace-15" type="email" name="usermail" id="usermail" value="" ng-model="usermail" placeholder="Mail*" style="font-weight: bold;" required>
+         <input class="btmspace-15" type="number" name="phonenumber" id="phonenumber" value="" ng-model="phone" placeholder="Phone No.*" style="font-weight: bold;" required>
+         <textarea class="btmspace-15" name="comment" id="comment" cols="25" rows="4" maxlength="2000" ng-model="usercomments" style="font-weight: bold;" placeholder="Your Expectations *" required></textarea>
+         <input class="btmspace-50" type="submit" name="submit" value="Submit" style="color: #ffffff;background-color: #00ADEF;width: 100px;border-radius: 6px;"/>
+         <input class="btmspace-50" type="reset" name="reset" value="Cancel" style="color: #ffffff;background-color: #00ADEF;width: 100px;border-radius: 6px;"/>
+         </fieldset>
+          </div>
+          </form>
+      </div>
+   </div>
+   </main>
+</div>
+<div class="wrapper row4" style="z-index: 1032;">
+ <div ng-include="'footer.html'"></div>
 </div>
 </div>
-<!-- <div class="wrapper row1" id="htmlfooter" style="bottom: 0px; position: fixed;">
-footer contents start here
-<div ng-include="'footer.html'"></div>
-</div> -->
-<a id="backtotop" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"><i class="fa fa-chevron-up"></i></a>
+<a id="backtotop" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;" style="z-index: 1033;"><i class="fa fa-chevron-up"></i></a>
 <!-- JAVASCRIPTS -->
 </div>

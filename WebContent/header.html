@@ -1,5 +1,5 @@
  <header id="fh5co-header" role="banner" >
-		<nav class="navbar navbar-default" role="navigation">
+		<nav class="navbar navbar-default" role="navigation" >
 			<div class="container-fluid">
 				<div class="navbar-header"> 
 				<!-- Mobile Toggle Menu Button -->
@@ -10,15 +10,47 @@
 				</div>
 				<div id="fh5co-navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-right">
-					<li ><a href="#/home"><span style="color: blue;font-weight: bold;">Home<span class="border"></span></span></a></li>
-					<li ><a href="#/aboutus"><span style="color: blue;font-weight: bold;">About Us<span class="border"></span></span></a></li>
-					<li ><a href="#/freelancingcourse"><span style="color: blue;font-weight: bold;">FreeLancing Course<span class="border"></span></span></a></li>
-					<li ><a href="#/recordedwebtraining"><span style="color: blue;font-weight: bold;">Recorded Web Training<span class="border"></span></span></a></li>
-					<li ><a href="#/faq"><span style="color: blue;font-weight: bold;">FAQ<span class="border"></span></span></a></li>
-					<li ><a href="#/contactus"><span style="color: blue;font-weight: bold;">Contact Us<span class="border"></span></span></a></li>
-					<li ><a href="#/requestfordemo"> <span style="color: blue;font-weight: bold;">Demo Request<span class="border"></span></span></a></li> 
+					<li><a href="#/home" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"><span style="color: blue;font-weight: bold;">Home<span class="border"></span></span></a></li>
+					<li><a href="#/aboutus" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"><span style="color: blue;font-weight: bold;">About Us<span class="border"></span></span></a></li>
+					<li><a href="#/freelancingcourse" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"><span style="color: blue;font-weight: bold;">FreeLancing Course<span class="border"></span></span></a></li>
+					<li><a href="#/recordedwebtraining" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"><span style="color: blue;font-weight: bold;">Recorded Web Training<span class="border"></span></span></a></li>
+					<li><a href="#/faq" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"><span style="color: blue;font-weight: bold;">FAQ<span class="border"></span></span></a></li>
+					<li><a href="#/contactus" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"><span style="color: blue;font-weight: bold;">Contact Us<span class="border"></span></span></a></li>
+					<li ><a href="#/requestfordemo" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"> <span style="color: blue;font-weight: bold;">Demo Request<span class="border"></span></span></a></li> 
 					</ul>
 				</div>
 			</div>
 		</nav>
 	</header>
+	<script>
+ $(".nav li").click(function( event ) {
+	 //event.preventDefault();
+    	var menuid = this.id;
+    	alert($('.nav li').hasClass('active'));
+   /*     $('.nav li').removeClass('active');
+        $(this).addClass('active');  */
+        
+        var index = $(".navbar .active").index();
+        var toindex =  $(this).index();
+        alert(+index+'===in toindex==='+toindex);
+        $(".nav li:eq("+index+")").parent().removeClass('active');
+        $(".nav li:eq("+toindex+")").parent().addClass('active');
+        alert(+index+'===222in toindex==='+toindex);
+        
+        /* var index = $(".navbar .active").index();
+        var toindex =  $(this).index();
+        alert(index+"============"+ toindex);
+        if(index != toindex){
+        	alert('in toindex==='+toindex);
+        	$('ul.nav li').each(function(){
+        		alert(toindex+'==========to============'+ $(this).index());
+        		if($(this).index() == toindex){
+        			alert("equals====");
+        			// $(this).css({'background-color':'red'});
+        			 $(this).addClass('active');
+        		}
+        		 
+        		});
+        } */
+});  
+</script>

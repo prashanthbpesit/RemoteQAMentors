@@ -95,7 +95,7 @@ File: Layout CSS
 #comments input, #comments textarea{width:100%; padding:10px; border:1px solid;}
 #comments textarea{overflow:auto;}
 #comments div{margin-bottom:15px;}
-#comments input[type="submit"], #comments input[type="reset"]{display:inline-block; width:auto; min-width:150px; margin:0; padding:8px 5px; cursor:pointer;}
+#comments input[type="submit"], #comments input[type="reset"]{display:inline-block; width:auto; min-width:50px; margin:0; padding:8px 5px; cursor:pointer;}
 
 /* Sidebar */
 .container .sidebar{}
