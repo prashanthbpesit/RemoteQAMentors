@@ -5974,10 +5974,10 @@ a > img.fh5co-align-center {
 
 /*# sourceMappingURL=style.css.map */
 .faqheader{
-color: #000080; font-weight: bold;font-style: oblique;
-}/*#000080 navy blue,  #00ADEF; aqua*/
+color: #000080; font-weight: bold;font-style: oblique;text-align: justify;
+}/*#000080 navy blue,  #00ADEF; aqua, faq content maroon #54180B;*/
 .faqcontents{
-color: #54180B; font-weight: bold;font-style: oblique;
+color: #161616; font-weight: bold;font-style: oblique; text-align: justify;
 }
 .videosheader{
 color: #000080;font-weight: bold;font-style: oblique;
@@ -5985,12 +5985,18 @@ color: #000080;font-weight: bold;font-style: oblique;
 .videoscontents{
 color: #54180B; font-weight: bold;font-style: oblique;
 }
+.homepageheader{
+color: #000080;font-weight: bold;
+}
+.homepagecontents{
+color: #54180B; font-weight: bold;
+}
 .aboutlinkred{
 	color: red;font-weight: bold;font-style: oblique;
 }
 .aboutlinkcontentred{
-	color: #FF00FF;font-weight: bold;font-style: oblique;
-}
+	color: #ff8000;font-weight: bold;font-style: oblique;
+}/*FF00FF*/
 .headerclass{
 	color: blue;font-weight: bold;
 }

@@ -1,4 +1,12 @@
 mainApp.controller('RequestDetailsController', function($scope, $http) {
+	Modernizr.load({
+	    test: Modernizr.inputtypes.date,
+	    nope: "js/jquery-ui.custom.js",
+	    callback: function() {
+	      $("input[type=date]").datepicker();
+	    }
+	
+	  });
 	getAllLists();
 	
 	function getAllLists(){
@@ -64,6 +72,7 @@ mainApp.controller('RequestDetailsController', function($scope, $http) {
 	
 	function getFreeLancingList() {
 		try {
+			//alert(document.getElementById("fromdate").value);
 			$http.post("/RemoteQAMentors/rest/services/getFreeLancingDetails").then(
 					function(response) {
 						$scope.freelancingdata = response.data;
@@ -113,5 +122,12 @@ mainApp.controller('RequestDetailsController', function($scope, $http) {
 			  })
 	 }
 	
+	 $scope.searchFreelancingDetails = function() {
+		 try{
+			 alert(document.getElementById("dtfromdate").value+"=========="+$scope.calfromfldate);
+		 }catch(err){
+			 alert(err);
+		 }
+	 }
 	
 });

@@ -1,8 +1,11 @@
+<script type="text/javascript" src="js/date_time.js"></script>
+<script type="text/javascript">window.onload = dateTimeFunction('dateTime');</script>
+<script type="text/javascript">window.onload = getYear('YearId');</script>
 <div align="center" style="padding-top: 10px; padding-bottom: 5px;">   
    <div class="one_half first first" align="center" >
   	<ul class="list-inline">
-        <li><i class="fa fa-phone"></i> +1- 609-613-7893 </li>
-        <li><i class="fa fa-envelope-o"></i> support@remoteqamentors.com </li>
+        <li style="font-weight: bold;"><i class="fa fa-phone"></i> +1- 609-613-7893 </li>
+        <li style="font-weight: bold;"><i class="fa fa-envelope-o"></i> support@remoteqamentors.com </li>
       </ul>
      </div>
       <div class="content one_half" align="center">  
@@ -18,15 +21,16 @@
   </div>
   <div align="center" style="padding-top: 5px; padding-bottom: 5px;">   
       <ul class="list-inline">
-        <li><h2 class="nospace font-x1" ><a href="#" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;" style="color: white; text-decoration: none; text-transform: uppercase;">Terms of Use</a></h2></li>
+        <li><h2 class="nospace font-x1" ><a href="#/usageterm" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;" style="color: white; text-decoration: none; text-transform: uppercase;">Terms of Use</a></h2></li>
         <li><h2 class="nospace font-x1"><a href="#/privacypolicy" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;" style="color: white; text-decoration: none;text-transform: uppercase;">Privacy Policy</a></h2></li>
-        <li><h2 class="nospace font-x1" ><a href="#" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;" style="color: white; text-decoration: none;text-transform: uppercase;">Refund Policy</a></h2></li>
-        <li><h2 class="nospace font-x1" ><a href="#" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;" style="color: white; text-decoration: none;text-transform: uppercase;">Reschedule Policy</a></h2></li>
-        <li><h2 class="nospace font-x1"><a href="#/reqdetails" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;" style="color: white; text-decoration: none;text-transform: uppercase;">Blog</a></h2></li>
+        <li><h2 class="nospace font-x1" ><a href="#/refundpolicies" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;" style="color: white; text-decoration: none;text-transform: uppercase;">Refund Policy</a></h2></li>
+        <li><h2 class="nospace font-x1" ><a href="#/reschedulepolicy" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;" style="color: white; text-decoration: none;text-transform: uppercase;">Reschedule Policy</a></h2></li>
+        <!-- <li><h2 class="nospace font-x1"><a href="#/reqdetails" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;" style="color: white; text-decoration: none;text-transform: uppercase;">Blog</a></h2></li> -->
         <li><h2 class="nospace font-x1" ><a href="#/earningsdisclaimer" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;" style="color: white; text-decoration: none;text-transform: uppercase;">Earnings Disclaimer</a></h2></li>
         <li><h2 class="nospace font-x1" ><a href="#/requestfordemo" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;" style="color: white; text-decoration: none;text-transform: uppercase;">Demo Request</a></h2></li>
 	  </ul>
   </div>
   <div align="center" style="padding-top: 5px; padding-bottom: 10px;">
-   <p style="text-align: center;">Copyright &copy; 2017 - All Rights Reserved - <a href="#/" style="font-weight: bold;color: white; text-decoration: none;">Remote QA Mentors</a></p>
+   <p style="text-align:center;">Copyright &copy; <span id="YearId"></span> , All Rights Reserved - <a href="#/" style="font-weight: bold;color: white; text-decoration: none;">Remote QA Mentors.</a>
+    <span style="width: 20px;">&nbsp; </span><b><i class="fa fa-calendar-check-o"></i>&nbsp;<span id="dateTime"></span></b><span style="width: 20px;">&nbsp; </span> </p>
   </div>

@@ -1,4 +1,4 @@
-<div id="pagetop">
+<div id="pagetop" style="height: 100%;background-image:url('images/demo/backgrounds/whiteboard.jpg');">
 <div class="wrapper row1" id="htmlheader" style="position: fixed;top: 0;right: 0;left: 0;width: 100%;z-index: 1030">
 <!-- header contents start here -->
 <!-- <div ng-include="'header.html'"></div> -->
@@ -8,19 +8,17 @@
 				<div class="navbar-header"> 
 				<!-- Mobile Toggle Menu Button -->
 				<a class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#fh5co-navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
-				<a class="navbar-brand" href="#/">Remote QA Mentors
-				<!-- <img src="images/demo/backgrounds/logo123.jpg" alt="logo"  class="img-responsive img-rounded"/> -->
-				</a>
+				<a class="navbar-brand" href="#/"><img src="images/demo/backgrounds/logo123.jpg" alt="logo"  class="img-responsive img-rounded"/></a>
 				</div>
 				<div id="fh5co-navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-right">
-					<li><a href="#/home" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"><span class="headerclass">Home<span class="border"></span></span></a></li>
+					<!-- <li><a href="#/home" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"><span class="headerclass">Home<span class="border"></span></span></a></li> -->
 					<li><a href="#/aboutus" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"><span class="headerclass">About Us<span class="border"></span></span></a></li>
 					<li class="active"><a href="#/freelancingcourse" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"><span class="headerclass">FreeLancing Course<span class="border"></span></span></a></li>
-					<li><a href="#/recordedwebtraining" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"><span class="headerclass">Recorded Web Training<span class="border"></span></span></a></li>
+					<!-- <li><a href="#/recordedwebtraining" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"><span class="headerclass">Recorded Web Training<span class="border"></span></span></a></li> -->
+					<li ><a href="#/requestfordemo" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"> <span class="headerclass">Demo Request<span class="border"></span></span></a></li> 
 					<li><a href="#/faq" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"><span class="headerclass">FAQ<span class="border"></span></span></a></li>
 					<li><a href="#/contactus" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"><span class="headerclass">Contact Us<span class="border"></span></span></a></li>
-					<li ><a href="#/requestfordemo" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"> <span class="headerclass">Demo Request<span class="border"></span></span></a></li> 
 					</ul>
 				</div>
 			</div>
@@ -29,97 +27,315 @@
 </div>
 <div ng-controller="FreeLancingController">
 <div class="wrapper bgded overlay light"  style="height: 100%;width: 100%;">
- <main class="hoc container clear"> 
- <!-- <div class="sectiontitle">
-      <h3 class="heading">Freelancing Courses</h3>
-      <p>How to earn extra income by Testing Apps & Websites</p>
-    </div> -->
- <div class="two_third first"> 
-    <ul class="nospace group services">
-      <li class="one_half first" style="padding-left: 10px;">
-        <article>	
-        <video width="300" height="240" controls="controls" >
-			<source src="video/echo-hereweare.mp4" type="video/mp4">
-			<object data="" width="320" height="240"><embed width="320" height="240" src="video/echo-hereweare.mp4"></object>
-		</video>
-          <h6 class="videosheader">Training week 1</h6>
-          <p class="videoscontents">This week will get basics of testing and other activities </p>
-        </article>
-      </li>
-      <li class="one_half">
-        <article>
-		<video width="300" height="240" controls="controls" >
-			<source src="video/echo-hereweare.mp4" type="video/mp4">
-			<object data="" width="320" height="240"><embed width="320" height="240" src="video/echo-hereweare.mp4"></object>
-		</video>
-          <h6 class="videosheader">Training week 2</h6>
-          <p class="videoscontents">This week will get basics of testing and other activities</p>
-        </article>
-      </li>
-      <li class="one_half first" style="padding-left: 10px;">
-        <article>
-        <video width="300" height="240" controls="controls" >
-			<source src="video/echo-hereweare.mp4" type="video/mp4">
-			<object data="" width="320" height="240"><embed width="320" height="240" src="video/echo-hereweare.mp4"></object>
-		</video>
-          <h6 class="videosheader">Training week 3</h6>
-          <p class="videoscontents">This week will get basics of testing and other activities</p>
-        </article>
-      </li>
-      <li class="one_half">
-        <article>
-		<video width="300" height="240" controls="controls" >
-			<source src="video/echo-hereweare.mp4" type="video/mp4">
-			<object data="" width="320" height="240"><embed width="320" height="240" src="video/echo-hereweare.mp4"></object>
-		</video>
-          <h6 class="videosheader">Training week 4</h6>
-          <p class="videoscontents">This week will get basics of testing and other activities</p>
-        </article>
-      </li>
-      <li class="one_half first" style="padding-left: 10px;">
-        <article>
-        <video width="300" height="240" controls="controls" >
-			<source src="video/echo-hereweare.mp4" type="video/mp4">
-			<object data="" width="320" height="240"><embed width="320" height="240" src="video/echo-hereweare.mp4"></object>
-		</video>
-          <h6 class="videosheader">Training week 5</h6>
-          <p class="videoscontents">This week will get basics of testing and other activities</p>
-        </article>
-      </li>
-      <li class="one_half">
-        <article>
-		<video width="300" height="240" controls="controls" >
-			<source src="video/echo-hereweare.mp4" type="video/mp4">
-			<object data="" width="320" height="240"><embed width="320" height="240" src="video/echo-hereweare.mp4"></object>
-		</video>
-          <h6 class="videosheader">Training week 6</h6>
-          <p class="videoscontents">This week will get basics of testing and other activities</p>
-        </article>
-      </li>
-    </ul>
+<main class="hoc container clear"> 
+<div  align="center">  <h4 style="color: #800000;font-weight: bold;">LEARN HOW TO EARN ONLINE AS A FREELANCER TESTING SIMPLE APPS AND WEBSITES </h4>
+<p  align="center" style="color: #800000;font-weight: bold;">A Unique Program with 100% MONEY BACK GUARANTEE</p>
+</div>
+<!-- <div class="sectiontitle">
+     <h3 class="heading">Freelancing Courses</h3>
+     <p>How to earn extra income by Testing Apps & Websites</p>
+   </div>  class="first"-->
+ <div  class="two_third first"> 
+<p class="faqheader">Hello & Welcome</p> 
+ <p class="faqheader">Thanks for visiting this page! </p>
+ <p class="faqcontents">If you are interested in learning how to earn money from home, you need to look no further. We will show you the exciting reality of Freelancing and how since past 2 years we are quietly generating $2000 - $3000 online month after month working part time on mobile Apps.</p>
+ <p class="faqcontents">We will show you EXACTLY how you too can do it even if you are non IT and have never made money from home. This course is equally applicable for all the non IT people, students, home makers and last but not the least experienced QA Professionals. </p>
+ <!-- <p class="faqheader">Let me introduce Myself: </p>
+ <p class="faqcontents">My name is Apurva Jain and I have been working from home since last 2 years! I am a Senior Mobile Tester by profession. Since last 2 years I am also working part time online to make a cool $2k - $3k every month by finding bugs in simple Mobile Apps. As I started doing well, lot of people including my friends wanted to learn how to do it. So after lot of thought, research and freelancing experience I designed a 6 week course (20 Hours course) that can enable you to do what am doing since last 2 years. It has a single aim &ndash; To give you everything you need to succeed in making Work from Home a reality. Let me be straight forward, even in this age of digitization, there are just extremely small percentage of people who are truly working from home and are their own boss! With god&apos;s grace, I have had a privilege of helping many people earn money online. Also, this program is backed by a 90 Day 100% Money Back Guarantee. If for any reason, you are not satisfied by this program or you don&apos;t see results within 90 days, you are entitled for a 100% Refund. So there is no risk on your end. </p>
+ <p class="faqcontents"><img src="images/freelancing/fl1.png" class="img-rounded" alt="Cinque Terre" width="304" height="236">&nbsp;<img src="images/freelancing/fl2.png" class="img-rounded" alt="Cinque Terre" width="304" height="236"> </p>
+<div class="row">
+  <div class="col-md-4">
+    <div class="thumbnail">
+      <a href="images/freelancing/fl1.png" target="_blank">
+        <img src="images/freelancing/fl1.png" alt="Lights" style="width:100%" align="bottom">
+    </a>
   </div>
-   <div class="content one_third" >
-      <div id="comments" style="border: 2px solid black; border-radius: 6px;padding: 15px;background-color: grey;width: 100%;">
-      <form ng-submit="registerLogin()">
-      
-       <div >
-         <fieldset>
-         <h3 style="font-weight: bold; color: white;">Enroll Courses</h3>
-         <label style="color: white; font-weight: bold; display: none;" id="divlancingconfirmaton">{{ ConfirmationMessage }}</label>
-          <input class="btmspace-15" type="text" name="username" id="username" value="" ng-model="username" placeholder="User Name *" style="font-weight: bold;" required>
-          <input class="btmspace-15" type="password" name="userpassword" id="userpassword" value="" ng-model="userpassword" placeholder="Password *" style="font-weight: bold;" required>
-         <input class="btmspace-15" type="text" value="" name="firstname" id="firstname" ng-model="firstname" placeholder="First Name *" style="font-weight: bold;" required>
-         <input class="btmspace-15" type="text" name="lastname" id="lastname" value="" size="40" ng-model="lastname" placeholder="Last Name *" style="font-weight: bold;" required>
-         <input class="btmspace-15" type="email" name="usermail" id="usermail" value="" ng-model="usermail" placeholder="Mail*" style="font-weight: bold;" required>
-         <input class="btmspace-15" type="number" name="phonenumber" id="phonenumber" value="" ng-model="phone" placeholder="Phone No.*" style="font-weight: bold;" required>
-         <textarea class="btmspace-15" name="comment" id="comment" cols="25" rows="4" maxlength="2000" ng-model="usercomments" style="font-weight: bold;" placeholder="Your Expectations *" required></textarea>
-         <input class="btmspace-50" type="submit" name="submit" value="Submit" style="color: #ffffff;background-color: #00ADEF;width: 100px;border-radius: 6px;"/>
-         <input class="btmspace-50" type="reset" name="reset" value="Cancel" style="color: #ffffff;background-color: #00ADEF;width: 100px;border-radius: 6px;"/>
-         </fieldset>
-          </div>
-          </form>
-      </div>
+</div>
+<div class="col-md-4">
+  <div class="thumbnail">
+    <a href="images/freelancing/fl2.png" target="_blank">
+      <img src="images/freelancing/fl2.png" alt="Nature" style="width:100%" align="bottom" >
+      </a>
+    </div>
+  </div>
+  <div class="col-md-6"></div>
+</div>
+ <p class="faqcontents">This is me.</p> -->
+<p class="faqheader" style="text-decoration: underline;" align="center">Here is a peek into my Freelancing activity</p>
+<!-- <div class="row">
+  <div class="col-md-12">
+    <div class="thumbnail">
+      <a href="images/freelancing/fl10.png" target="_blank">
+        <img src="images/freelancing/fl10.png" alt="Lights" align="bottom">
+       </a>
+     </div>
    </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <div class="thumbnail">
+      <a href="images/freelancing/fl11.png" target="_blank">
+        <img src="images/freelancing/fl11.png" alt="Lights" align="bottom">
+       </a>
+     </div>
+   </div>
+</div> -->
+<div class="row">
+  <div class="col-md-12">
+    <div class="thumbnail">
+      <a href="images/freelancing/fl12.png" target="_blank">
+        <img src="images/freelancing/fl12.png" alt="Lights" align="bottom">
+       </a>
+     </div>
+   </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <div class="thumbnail">
+      <a href="images/freelancing/fl13.png" target="_blank">
+        <img src="images/freelancing/fl13.png" alt="Lights" align="bottom">
+       </a>
+     </div>
+   </div>
+</div>
+ </div>
+ <div class="content one_third">
+<div id="comments" style="border: 2px solid black; border-radius: 6px;padding:5px 15px 10px 10px; background-color: grey;width: 100%;" >
+<form ng-submit="registerLogin()">
+<div >
+  <fieldset>
+  <h4 style="font-weight: bold; color: white;text-transform: uppercase; ">Want to Enroll?</h4> 
+<label style="color: #000080; font-weight: bold; display: none;" id="divlancingconfirmaton">{{ ConfirmationMessage }}</label>
+<input class="btmspace-15" type="text" name="username" id="username" value="" ng-model="username" placeholder="User Name *" style="font-weight: bold;" required>
+<input class="btmspace-15" type="password" name="userpassword" id="userpassword" value="" ng-model="userpassword" placeholder="Password *" style="font-weight: bold;" required> 
+<input class="btmspace-15" type="text" value="" name="firstname" id="firstname" ng-model="firstname" placeholder="First Name *" style="font-weight: bold;" required>
+<input class="btmspace-15" type="text" name="lastname" id="lastname" value="" size="40" ng-model="lastname" placeholder="Last Name *" style="font-weight: bold;" required>
+<input class="btmspace-15" type="email" name="usermail" id="usermail" value="" ng-model="usermail" placeholder="Mail*" style="font-weight: bold;" required>
+<input class="btmspace-15" type="number" name="phonenumber" id="phonenumber" value="" ng-model="phone" placeholder="Phone No.*" style="font-weight: bold;" required>
+<textarea class="btmspace-15" name="comment" id="comment" cols="25" rows="1" maxlength="2000" ng-model="usercomments" style="font-weight: bold;" placeholder="Your Expectations *" required></textarea>
+<input class="btmspace-50" type="submit" name="submit" value="Submit" style="color: #ffffff;background-color: #00ADEF;width: 100px;border-radius: 6px;"/>
+<input class="btmspace-50" type="reset" name="reset" value="Cancel" style="color: #ffffff;background-color: #00ADEF;width: 100px;border-radius: 6px;"/>
+</fieldset>
+ </div>
+       </form>
+   </div>
+</div>
+ <div  class="first">
+<p class="faqheader" style="text-decoration: underline;" align="center">Paypal Payouts:</p>
+<div class="row">
+  <div class="col-md-12">
+    <div class="thumbnail">
+      <a href="images/freelancing/fl14.png" target="_blank">
+        <img src="images/freelancing/fl14.png" alt="Lights" style="width:100%" align="bottom">
+       </a>
+     </div>
+   </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <div class="thumbnail">
+      <a href="images/freelancing/fl15.png" target="_blank">
+        <img src="images/freelancing/fl15.png" alt="Lights" style="width:100%" align="bottom">
+       </a>
+     </div>
+   </div>
+</div>
+ <p class="faqheader">So what is this all about? </p>
+ <p class="faqcontents">There are number of platforms where you can earn extra money by testing simple apps and websites. It is extremely simple testing &ndash; Similar to how an end user would use an app or website, you test it and log in the defects you observe. Also there are step by step validation &ndash; Test cases that you execute and get paid for validating it.  </p>
+ <div class="row">
+   <div class="col-md-12">
+     <div class="thumbnail">
+       <a href="images/freelancing/fl3.png" target="_blank">
+         <img src="images/freelancing/fl3.png" alt="Lights" style="width:100%" align="bottom">
+      </a>
+    </div>
+  </div>
+</div>
+ <div class="row">
+  <div class="col-md-12">
+    <div class="thumbnail">
+      <a href="images/freelancing/fl4.png" target="_blank">
+        <img src="images/freelancing/fl4.png" alt="Lights" style="width:100%" align="bottom">
+      </a>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <div class="thumbnail">
+      <a href="images/freelancing/fl5.png" target="_blank">
+        <img src="images/freelancing/fl5.png" alt="Lights" style="width:100%" align="bottom">
+       </a>
+     </div>
+   </div>
+</div>
+ <p class="faqcontents">One among this is uTest, one of the biggest communities of testers in the world. uTest is also considered as one of the best places for testers to find testing projects and get paid. There are more than 300,000+ testers registered here from all over the world. </p> 
+ <p class="faqheader" style="text-decoration: underline;">Here&apos;s how things work on uTest & Other similar platforms:</p>
+<p class="faqcontents">uTest has lot of customers and act as an interface between testers and clients. They get the clients and all you need to do is work on the projects they get! So there is no bidding, no back and forth communication, no interviews. uTest has it&apos;s own ranking and different statistics for all the testers. So it will hand out different projects to different testers based on their quality of work. The more bugs you raise, the more money you make. You can test any time you like in the way you want. You will be your own boss.</p>
+<p class="faqcontents">It&apos;s called <label class="faqheader" style="text-decoration: underline;">Pay-Per-Bug model</label>. </p>
+ <p class="faqcontents">There are thousands of large and small companies who want their app and websites tested on Crowd Sourcing Platform like uTest because it is economical, fast & can be tested on variety of devices.  </p>
+ <p class="faqcontents">This gives us a unique opportunity to be the tester who can test on their apps and websites. uTest is a very unique platform as there is no Bidding involved. They will keep sending you projects based on your quality of work.  </p>
+ <p class="faqheader">That sounds good, right?</p>
+ <p class="faqcontents">In this course we will train and mentor you over 6 weeks with step-by-step guidance and everything you need to know to become an expert freelance tester and earn extra money. 
+Here is what we are going to do over 6 weeks: </p>
+<ol  class="faqcontents" >
+<li>Teach you basics of manual testing </li>
+<li>Show you the CORRECT way to create  your freelancing account </li>
+<li>Teach how to TEST and REPORT the bugs properly. </li>
+<li>Help you get over initial online obstacles & clear initial confusion </li>
+<li>Train you on free apps & tools you will have to use day in and day out </li>
+<li>Discuss on strategies, technical aspects of testing & ways to optimize your time returns </li>
+<li>Teach you how to capture logs, videos and screenshots on both laptop & mobile. </li>
+<li>Create a follow up system so that you don't lose momentum </li>
+</ol>
+<!-- 
+ <p class="faqheader" style="text-decoration: underline;">Brief Introduction about us:</p>
+<p class="faqcontents">We have been freelancing on uTest for more than 2 years and are a GOLD rated member. Currently we are in top 100 Testers out of 300,000+ testers and have worked on 1200+ projects so far. </p>
+<p class="faqheader" style="text-decoration: underline;" align="center">MY RANKING</p>
+<div class="row">
+  <div class="col-md-12">
+    <div class="thumbnail">
+      <a href="images/freelancing/fl6.png" target="_blank">
+        <img src="images/freelancing/fl6.png" alt="Lights" style="width:100%" align="bottom">
+       </a>
+     </div>
+   </div>
+</div>
+<p class="faqheader" style="text-decoration: underline;" align="center">Test Cycles Participations, My Login Date & Rating</p>
+<div class="row">
+  <div class="col-md-12">
+    <div class="thumbnail">
+      <a href="images/freelancing/fl7.png" target="_blank">
+        <img src="images/freelancing/fl7.png" alt="Lights" style="width:100%" align="bottom">
+       </a>
+     </div>
+   </div>
+</div>
+<p class="faqheader" style="text-decoration: underline;" align="center">My Activity within uTest</p>
+<div class="row">
+  <div class="col-md-12">
+    <div class="thumbnail">
+      <a href="images/freelancing/fl8.png" target="_blank">
+        <img src="images/freelancing/fl8.png" alt="Lights" style="width:100%" align="bottom">
+       </a>
+     </div>
+   </div>
+</div>
+<p class="faqheader" style="text-decoration: underline;" align="center">My Current Rating</p>
+<div class="row">
+  <div class="col-md-12">
+    <div class="thumbnail">
+      <a href="images/freelancing/fl9.png" target="_blank">
+        <img src="images/freelancing/fl9.png" alt="Lights" style="width:100%" align="bottom">
+       </a>
+     </div>
+   </div>
+</div> -->
+<!-- <p class="faqheader" style="text-decoration: underline;" align="center">Let&apos;s see some Test Cycle payouts:</p>
+<div class="row">
+  <div class="col-md-6">
+    <div class="thumbnail">
+      <a href="images/freelancing/fl16.png" target="_blank">
+        <img src="images/freelancing/fl16.png" alt="Lights" style="width:100%" align="bottom">
+       </a>
+     </div>
+     <p class="faqheader" style="text-decoration: underline;" align="center">Example 1</p>
+   </div>
+  <div class="col-md-6">
+    <div class="thumbnail">
+      <a href="images/freelancing/fl17.png" target="_blank">
+        <img src="images/freelancing/fl17.png" alt="Lights" style="width:100%" align="bottom">
+       </a>
+     </div>
+   </div>
+   <p class="faqheader" style="text-decoration: underline;" align="center">Example 2</p>
+</div> 
+<div class="row">
+  <div class="col-md-6">
+    <div class="thumbnail">
+      <a href="images/freelancing/fl18.png" target="_blank">
+        <img src="images/freelancing/fl18.png" alt="Lights" style="width:100%" align="bottom">
+       </a>
+     </div>
+     <p class="faqheader" style="text-decoration: underline;" align="center">Example 3</p>
+   </div>
+  <div class="col-md-6">
+    <div class="thumbnail">
+      <a href="images/freelancing/fl19.png" target="_blank">
+        <img src="images/freelancing/fl19.png" alt="Lights" style="width:100%" align="bottom">
+       </a>
+     </div>
+     <p class="faqheader" style="text-decoration: underline;" align="center">Example 4</p>
+   </div>
+</div> -->
+<p class="faqheader" style="text-decoration: underline;" >What is a bug?</p>
+<p class="faqcontents">Bug is just an error in the way Website or App look, work and functions. As simple as that. This is not complicated testing. We will be testing apps like an end user and report any feature that does not look or work as it is supposed to be. This is simple testing and anyone can do it. We will teach on different types of bugs, how to look for them and also how to report it properly. </p>
+<p class="faqheader" style="text-decoration: underline;" align="center">Few examples of Bugs: </p>
+<div class="row">
+  <div class="col-md-4">
+    <div class="thumbnail">
+      <a href="images/freelancing/fl20.png" target="_blank">
+        <img src="images/freelancing/fl20.png" alt="Lights" style="width:100%" align="bottom">
+       </a>
+     </div>
+     <p class="faqheader" style="text-decoration: underline;color: green;" align="center">Example 1:</p>
+   </div>
+    <div class="col-md-4">
+    <div class="thumbnail">
+      <a href="images/freelancing/fl21.png" target="_blank">
+        <img src="images/freelancing/fl21.png" alt="Lights" style="width:100%" align="bottom">
+       </a>
+     </div>
+     <p class="faqheader" style="text-decoration: underline;color: green;" align="center">Example 2:</p>
+   </div>
+    <div class="col-md-4">
+    <div class="thumbnail">
+      <a href="images/freelancing/fl22.png" target="_blank">
+        <img src="images/freelancing/fl22.png" alt="Lights" style="width:100%" align="bottom">
+       </a>
+     </div>
+     <p class="faqheader" style="text-decoration: underline;color: green;" align="center">Example 3:</p>
+   </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="thumbnail">
+      <a href="images/freelancing/fl23.png" target="_blank">
+        <img src="images/freelancing/fl23.png" alt="Lights" style="width:100%" align="bottom">
+       </a>
+     </div>
+     <p class="faqheader" style="text-decoration: underline;color: green;" align="center">Example 4:</p>
+   </div>
+    <div class="col-md-4">
+    <div class="thumbnail">
+      <a href="images/freelancing/fl24.png" target="_blank">
+        <img src="images/freelancing/fl24.png" alt="Lights" style="width:100%" align="bottom">
+       </a>
+     </div>
+     <p class="faqheader" style="text-decoration: underline;color: green;" align="center">Example 5:</p>
+   </div>
+    <div class="col-md-4">
+   </div>
+</div>
+<p class="faqcontents">Test case results are different for each project but the bug payout is very much similar to above screenshot. </p>
+<p class="faqheader" style="text-decoration: underline;">That&apos;s in short summary of what this is all about!</p>
+<p class="faqcontents">Hopefully, with all this information now you should be fairly confident that this thing is not SCAM and false promises. This is one of those rare Work-From-Home Legit QA  Freelancing Opportunity. </p>
+<p class="faqcontents">So let&apos;s get down to the course. We are going to have a 6 week course (1 day a week) to help you succeed here at uTest. Each class is going to be for 3-4 hours. It will be an Online webex class. There is a specific reason for doing it once a week as initial days you will need to learn few things and also upgrade your skills till you get frequent project invites. First class is FREE and you basically pay us only if you want to do the complete course. </p>
+<p class="faqheader" style="text-decoration: underline;">Class Strength:</p>
+<p class="faqcontents">We are going to limit the class to max 25 people as we don't want to crowd it up and lose personal touch. This way we also can pay personal attention. </p>
+<p class="faqheader" style="text-decoration: underline;">Course Payments:</p>
+<p class="faqcontents">There is a 1 time fee of $500 that you can pay anytime between 1st and 2nd week of the course. It is for the training, mentoring and for guiding you through this journey. To be honest with you, it is nothing for what this can mean for you. We have kept it way underpriced and also affordable for almost everyone. </p>
+<p class="faqheader" style="text-decoration: underline;" >Course Expectations:</p>
+<p class="faqcontents">This course is going to be our legacy and our commitment to give you the best. This course will be realistic, truthful, practical and also smart in its approach. What we need from you is COMMITMENT. This is not a GET RICH EASY scheme. You will not be successful just because you joined & paid for this course. There is real work that needs to be done and you will help real companies out there. So be prepared to put in few hours for it. However we would like to give you a promise: This can CHANGE your life. If you can implement and stick with it, you can potentially keep doing this for quite few years.</p>
+<p class="faqheader" style="text-decoration: underline;" align="center">Follow up:</p>
+<p class="faqcontents">We are very excited to show you what we got to offer and would really like you to consider it seriously. The course is backed by 90 Day 100% Money Back Guarantee. There is no upfront fee to join the first class and you literally pay only if you like the course. Please email me back your contact information on sumithutest@gmail.com or support@remoteqamentors.com if you do want to be enrolled. We will call you for further follow up and confirmation. Thank you so much for your time and consideration. </p>
+<p class="faqcontents"  align="right">Email: sumithutest@gmail.com</p>
+<p class="faqcontents"  align="right">Email: support@remoteqamentors.com	</p>
+<p class="faqcontents">Thank you</p>
+<p class="faqcontents">Sumith & Apurva Jain</p>
+<p class="faqcontents"></p>
+</div>
+ 
    </main>
 </div>
 <div class="wrapper row4" style="z-index: 1032;">
@@ -130,6 +346,31 @@
 footer contents start here
 <div ng-include="'footer.html'"></div>
 </div> -->
-<a id="backtotop" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;" style="z-index: 1033;"><i class="fa fa-chevron-up"></i></a>
+<!-- <button id="enroll" type="button" class="btn btn-info" style="height:40px; z-index: 1023;" style="color: #ffffff;background-color: #00ADEF;width: 100px;border-radius: 6px;" onclick="document.getElementById('enroll').style.display='none';document.getElementById('enrolpanel').style.display='block'">Enroll to Freelancing Courses</button>
+<div class="content one_third" style="display:none;z-index: 1024;" id="enrolpanel">
+<div style="border: 2px solid black; border-radius: 6px;padding:0px 10px 5px 10px; background-color:#00ADEF ;width: 100%;height: 30px; ">
+<a id="closeenrol" onclick="document.getElementById('enrolpanel').style.display='none';document.getElementById('enroll').style.display='block';" style="z-index: 1033;float: right;"><span style="color: #ffffff; text-transform: uppercase;font: bold;">Close</span></a>
+</div>
+<div id="comments" style="border: 2px solid black; border-radius: 6px;padding:5px 15px 10px 10px; background-color: grey;width: 100%;min-height: 300px; max-height: 580px;overflow: scroll;" >
+<form ng-submit="registerLogin()">
+<div >
+  <fieldset>
+  <h3 style="font-weight: bold; color: white;text-transform: uppercase; ">Enroll to Freelancing Courses</h3>
+<label style="color: #000080; font-weight: bold; display: none;" id="divlancingconfirmaton">{{ ConfirmationMessage }}</label>
+<input class="btmspace-15" type="text" name="username" id="username" value="" ng-model="username" placeholder="User Name *" style="font-weight: bold;" required>
+<input class="btmspace-15" type="password" name="userpassword" id="userpassword" value="" ng-model="userpassword" placeholder="Password *" style="font-weight: bold;" required> 
+<input class="btmspace-15" type="text" value="" name="firstname" id="firstname" ng-model="firstname" placeholder="First Name *" style="font-weight: bold;" required>
+<input class="btmspace-15" type="text" name="lastname" id="lastname" value="" size="40" ng-model="lastname" placeholder="Last Name *" style="font-weight: bold;" required>
+<input class="btmspace-15" type="email" name="usermail" id="usermail" value="" ng-model="usermail" placeholder="Mail*" style="font-weight: bold;" required>
+<input class="btmspace-15" type="number" name="phonenumber" id="phonenumber" value="" ng-model="phone" placeholder="Phone No.*" style="font-weight: bold;" required>
+<textarea class="btmspace-15" name="comment" id="comment" cols="25" rows="4" maxlength="2000" ng-model="usercomments" style="font-weight: bold;" placeholder="Your Expectations *" required></textarea>
+<input class="btmspace-50" type="submit" name="submit" value="Submit" style="color: #ffffff;background-color: #00ADEF;width: 100px;border-radius: 6px;"/>
+<input class="btmspace-50" type="reset" name="reset" value="Cancel" style="color: #ffffff;background-color: #00ADEF;width: 100px;border-radius: 6px;"/>
+</fieldset>
+ </div>
+       </form>
+   </div>
+</div> -->
+<a id="backtotop" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;" style="z-index: 1025;"><i class="fa fa-chevron-up"></i></a>
 <!-- JAVASCRIPTS -->
 </div>

@@ -446,6 +446,7 @@ public class ToolManager {
 			LoginQuery = session.createQuery(StringQuery.toString());
 			StringQuery = null;
 			List<Users> TempUsers = LoginQuery.list();
+			System.out.println("TempUsers size================"+TempUsers.size());
 			LoginQuery = null;
 			int nid = 1;
 			if (TempUsers != null && !TempUsers.isEmpty()) {

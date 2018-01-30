@@ -1,4 +1,4 @@
-<div id="top">
+<div id="top" style="height: 100%;background-image:url('images/demo/backgrounds/whiteboard.jpg');">
 <div class="wrapper row1" id="htmlheader" style="position: fixed;top: 0;right: 0;left: 0;width: 100%;z-index: 1030">
 <!-- header contents start here -->
 <!-- <div ng-include="'header.html'"></div> -->
@@ -8,19 +8,17 @@
 				<div class="navbar-header"> 
 				<!-- Mobile Toggle Menu Button -->
 				<a class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#fh5co-navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
-				<a class="navbar-brand" href="#/">Remote QA Mentors
-				<!-- <img src="images/demo/backgrounds/logo123.jpg" alt="logo"  class="img-responsive img-rounded"/> -->
-				</a>
+				<a class="navbar-brand" href="#/"><img src="images/demo/backgrounds/logo123.jpg" alt="logo"  class="img-responsive img-rounded"/> </a>
 				</div>
 				<div id="fh5co-navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-right">
-					<li><a href="#/home" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"><span class="headerclass">Home<span class="border"></span></span></a></li>
+					<!-- <li><a href="#/home" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"><span class="headerclass">Home<span class="border"></span></span></a></li> -->
 					<li><a href="#/aboutus" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"><span class="headerclass">About Us<span class="border"></span></span></a></li>
 					<li><a href="#/freelancingcourse" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"><span class="headerclass">FreeLancing Course<span class="border"></span></span></a></li>
-					<li class="active"><a href="#/recordedwebtraining" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"><span class="headerclass">Recorded Web Training<span class="border"></span></span></a></li>
+					<!-- <li class="active"><a href="#/recordedwebtraining" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"><span class="headerclass">Recorded Web Training<span class="border"></span></span></a></li> -->
+					<li ><a href="#/requestfordemo" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"> <span class="headerclass">Demo Request<span class="border"></span></span></a></li> 
 					<li><a href="#/faq" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"><span class="headerclass">FAQ<span class="border"></span></span></a></li>
 					<li><a href="#/contactus" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"><span class="headerclass">Contact Us<span class="border"></span></span></a></li>
-					<li ><a href="#/requestfordemo" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"> <span class="headerclass">Demo Request<span class="border"></span></span></a></li> 
 					</ul>
 				</div>
 			</div>
@@ -100,12 +98,12 @@
   </div>
    <div class="content one_third" >
       <div id="comments" style="border: 2px solid black; border-radius: 6px;padding: 15px;background-color: grey;width: 100%;">
-      <form ng-submit="registerLogin()">
+      <form ng-submit="registerRecordedWebLogin()">
       
        <div >
          <fieldset>
-         <h3 style="font-weight: bold; color: white;">Enroll Courses</h3>
-         <label style="color: white; font-weight: bold; display: none;" id="divlancingconfirmaton">{{ ConfirmationMessage }}</label>
+         <h3 style="font-weight: bold; color: white;text-transform: uppercase;">Enroll to Recorded Web Training</h3>
+         <label style="color: #000080; font-weight: bold; display: none;" id="divrecordedwebconfirmaton">{{ ConfirmationMessage }}</label>
           <input class="btmspace-15" type="text" name="username" id="username" value="" ng-model="username" placeholder="User Name *" style="font-weight: bold;" required>
           <input class="btmspace-15" type="password" name="userpassword" id="userpassword" value="" ng-model="userpassword" placeholder="Password *" style="font-weight: bold;" required>
          <input class="btmspace-15" type="text" value="" name="firstname" id="firstname" ng-model="firstname" placeholder="First Name *" style="font-weight: bold;" required>

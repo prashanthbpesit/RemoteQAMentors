@@ -45,7 +45,19 @@ mainApp.config(function($routeProvider) {
 			templateUrl: 'reqdetails.html',
 			controller: 'RequestDetailsController'
 		})
+		.when('/usageterm', {
+			templateUrl: 'usageterm.html',
+			controller: 'UsageTermsController'
+		})
+		.when('/refundpolicies', {
+			templateUrl: 'refundpolicies.html',
+			controller: 'RefundPoliciesController'
+		})
+		.when('/reschedulepolicy', {
+			templateUrl: 'reschedulepolicy.html',
+			controller: 'ReschedulePolicyController'
+		})
 		.otherwise({
-			redirectTo: '/home'
+			redirectTo: '/freelancingcourse'
 		});
 });

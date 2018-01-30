@@ -4,12 +4,26 @@
 
 <hibernate-configuration>
    <session-factory>
-   <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+<!--    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property> -->
    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/dbremoteqamentors</property>
    <property name="hibernate.connection.username">root</property>
    <property name="hibernate.connection.password">root</property>
    <property name="javax.persistence.validation.mode">none</property>
+   <!-- JDBC connection pool (use the built-in) -->
+	<property name="hibernate.connection.pool_size">1</property>
+	<!-- SQL dialect -->
+	<property name="hibernate.dialect">org.hibernate.dialect.MySQLInnoDBDialect</property>
+	<!-- Enable Hibernate's automatic session context management -->
+	<property name="hibernate.current_session_context_class">thread</property>
+	<!-- Disable the second-level cache -->
+	<property name="hibernate.cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>
+	<!-- Echo all executed SQL to stdout -->
+	<property name="hibernate.show_sql">true</property>
+	<property name="format_sql">false</property>
+	<!-- Drop and re-create the database schema on startup -->
+	<property name="hibernate.hbm2ddl.auto">update</property>
+   <!-- mapping classes -->
    <mapping class="com.mapping.Users"/>
    <mapping class="com.mapping.DemoRequest"/>
    <mapping class="com.mapping.Suggestion"/>

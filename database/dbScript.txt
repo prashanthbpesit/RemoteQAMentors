@@ -38,3 +38,5 @@ fldusercomments varchar(5012) null,
 fldacceptorcomments varchar(5012) null,
 fldTimeStamp timestamp default CURRENT_TIMESTAMP 
 );
+
+
