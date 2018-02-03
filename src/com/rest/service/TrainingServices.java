@@ -55,16 +55,13 @@ public class TrainingServices {
 	@POST
 	@Path("/enrollToFreeLancing")
 	@Produces(MediaType.APPLICATION_XML)
-	public String enrollToFreeLancing(@QueryParam("username") String inUserName,
-			@QueryParam("password") String inPassword, @QueryParam("firstname") String inFirstName,
-			@QueryParam("lastname") String inLastName, @QueryParam("usermail") String inEmail,
+	public String enrollToFreeLancing(@QueryParam("firstname") String inFirstName, @QueryParam("usermail") String inEmail,
 			@QueryParam("phone") String inPhone, @QueryParam("usercomments") String inUserComments) {
 		String value = "";
 		try {
-			System.out.println(inUserName + "======" + inPassword + "========" + inEmail + "===" + inPhone);
+			System.out.println("========" + inEmail + "===" + inPhone);
 			ToolManager ToolManager = new ToolManager();
-			value = ToolManager.addUsers(inUserName, inPassword, inEmail, inPhone, inFirstName, inLastName, 1,
-					inUserComments);
+			value = ToolManager.addUsers(inEmail, inPhone, inFirstName, 1,inUserComments);
 			ToolManager = null;
 		} catch (Exception Ex) {
 			Ex.printStackTrace();
@@ -93,8 +90,7 @@ public class TrainingServices {
 		try {
 			System.out.println(inUserName + "======" + inPassword + "========" + inEmail + "===" + inPhone);
 			ToolManager ToolManager = new ToolManager();
-			value = ToolManager.addUsers(inUserName, inPassword, inEmail, inPhone, inFirstName, inLastName, 2,
-					inUserComments);
+			value = ToolManager.addUsers(inEmail, inPhone, inFirstName, 2,inUserComments);
 			ToolManager = null;
 		} catch (Exception Ex) {
 			Ex.printStackTrace();
@@ -115,14 +111,13 @@ public class TrainingServices {
 	@POST
 	@Path("/demorequest")
 	@Produces(MediaType.APPLICATION_XML)
-	public String demorequest(@QueryParam("firstname") String inFirstName, @QueryParam("lastname") String inLastName,
-			@QueryParam("usermail") String inEmail, @QueryParam("phone") String inPhone,
-			@QueryParam("usercomments") String inUserComments) {
+	public String demorequest(@QueryParam("firstname") String inFirstName,@QueryParam("usermail") String inEmail,
+			@QueryParam("phone") String inPhone, @QueryParam("usercomments") String inUserComments) {
 		String value = "";
 		try {
-			System.out.println(inFirstName + "======" + inLastName + "========" + inEmail + "===" + inPhone);
+			System.out.println(inFirstName + "======" + "========" + inEmail + "===" + inPhone);
 			ToolManager ToolManager = new ToolManager();
-			value = ToolManager.demoRequest(inFirstName, inLastName, inEmail, inPhone, inUserComments);
+			value = ToolManager.demoRequest(inFirstName, inEmail, inPhone, inUserComments);
 			ToolManager = null;
 		} catch (Exception Ex) {
 			Ex.printStackTrace();

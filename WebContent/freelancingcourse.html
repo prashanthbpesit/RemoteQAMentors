@@ -5,11 +5,16 @@
 <header id="fh5co-header" role="banner" >
 		<nav class="navbar navbar-default" role="navigation" >
 			<div class="container-fluid">
+			<div class="row">
+			<div class="col-md-1" align="center"></div>
+			<div class="col-md-2" align="center">
 				<div class="navbar-header"> 
 				<!-- Mobile Toggle Menu Button -->
 				<a class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#fh5co-navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
 				<a class="navbar-brand" href="#/"><img src="images/demo/backgrounds/logo123.jpg" alt="logo"  class="img-responsive img-rounded"/></a>
 				</div>
+				</div>
+			<div class="col-md-8" align="left">
 				<div id="fh5co-navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-right">
 					<!-- <li><a href="#/home" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"><span class="headerclass">Home<span class="border"></span></span></a></li> -->
@@ -21,6 +26,7 @@
 					<li><a href="#/contactus" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"><span class="headerclass">Contact Us<span class="border"></span></span></a></li>
 					</ul>
 				</div>
+				</div></div>
 			</div>
 		</nav>
 	</header>
@@ -28,9 +34,9 @@
 <div ng-controller="FreeLancingController">
 <div class="wrapper bgded overlay light"  style="height: 100%;width: 100%;">
 <main class="hoc container clear"> 
-<div  align="center">  <h4 style="color: #800000;font-weight: bold;">LEARN HOW TO EARN ONLINE AS A FREELANCER TESTING SIMPLE APPS AND WEBSITES </h4>
+<!-- <div  align="center">  <h4 style="color: #800000;font-weight: bold;">LEARN HOW TO EARN ONLINE AS A FREELANCER TESTING SIMPLE APPS AND WEBSITES </h4>
 <p  align="center" style="color: #800000;font-weight: bold;">A Unique Program with 100% MONEY BACK GUARANTEE</p>
-</div>
+</div> -->
 <!-- <div class="sectiontitle">
      <h3 class="heading">Freelancing Courses</h3>
      <p>How to earn extra income by Testing Apps & Websites</p>
@@ -83,18 +89,14 @@
 <div class="row">
   <div class="col-md-12">
     <div class="thumbnail">
-      <a href="images/freelancing/fl12.png" target="_blank">
         <img src="images/freelancing/fl12.png" alt="Lights" align="bottom">
-       </a>
      </div>
    </div>
 </div>
 <div class="row">
   <div class="col-md-12">
     <div class="thumbnail">
-      <a href="images/freelancing/fl13.png" target="_blank">
         <img src="images/freelancing/fl13.png" alt="Lights" align="bottom">
-       </a>
      </div>
    </div>
 </div>
@@ -104,15 +106,15 @@
 <form ng-submit="registerLogin()">
 <div >
   <fieldset>
-  <h4 style="font-weight: bold; color: white;text-transform: uppercase; ">Want to Enroll?</h4> 
+  <h4 style="font-weight: bold; color: white;text-transform: uppercase; ">Enroll to Freelancing Course</h4> 
 <label style="color: #000080; font-weight: bold; display: none;" id="divlancingconfirmaton">{{ ConfirmationMessage }}</label>
-<input class="btmspace-15" type="text" name="username" id="username" value="" ng-model="username" placeholder="User Name *" style="font-weight: bold;" required>
-<input class="btmspace-15" type="password" name="userpassword" id="userpassword" value="" ng-model="userpassword" placeholder="Password *" style="font-weight: bold;" required> 
-<input class="btmspace-15" type="text" value="" name="firstname" id="firstname" ng-model="firstname" placeholder="First Name *" style="font-weight: bold;" required>
-<input class="btmspace-15" type="text" name="lastname" id="lastname" value="" size="40" ng-model="lastname" placeholder="Last Name *" style="font-weight: bold;" required>
-<input class="btmspace-15" type="email" name="usermail" id="usermail" value="" ng-model="usermail" placeholder="Mail*" style="font-weight: bold;" required>
-<input class="btmspace-15" type="number" name="phonenumber" id="phonenumber" value="" ng-model="phone" placeholder="Phone No.*" style="font-weight: bold;" required>
-<textarea class="btmspace-15" name="comment" id="comment" cols="25" rows="1" maxlength="2000" ng-model="usercomments" style="font-weight: bold;" placeholder="Your Expectations *" required></textarea>
+<!-- <input class="btmspace-15" type="text" name="username" id="username" value="" ng-model="username" placeholder="User Name *" style="font-weight: bold;" required>
+<input class="btmspace-15" type="password" name="userpassword" id="userpassword" value="" ng-model="userpassword" placeholder="Password *" style="font-weight: bold;" required> --> 
+<input class="btmspace-15" type="text" value="" name="firstname" id="firstname" ng-model="firstname" placeholder="Name *" style="font-weight: bold;" required>
+<!-- <input class="btmspace-15" type="text" name="lastname" id="lastname" value="" size="40" ng-model="lastname" placeholder="Last Name *" style="font-weight: bold;" required> -->
+<input class="btmspace-15" type="email" name="usermail" id="usermail" value="" ng-model="usermail" placeholder="Email*" style="font-weight: bold;" required>
+<input class="btmspace-15" type="number" name="phonenumber" id="phonenumber" value="" ng-model="phone" placeholder="Number" style="font-weight: bold;">
+<textarea class="btmspace-15" name="comment" id="comment" cols="25" rows="4" maxlength="2000" ng-model="usercomments" style="font-weight: bold;" placeholder="Comments"></textarea>
 <input class="btmspace-50" type="submit" name="submit" value="Submit" style="color: #ffffff;background-color: #00ADEF;width: 100px;border-radius: 6px;"/>
 <input class="btmspace-50" type="reset" name="reset" value="Cancel" style="color: #ffffff;background-color: #00ADEF;width: 100px;border-radius: 6px;"/>
 </fieldset>
@@ -125,18 +127,14 @@
 <div class="row">
   <div class="col-md-12">
     <div class="thumbnail">
-      <a href="images/freelancing/fl14.png" target="_blank">
         <img src="images/freelancing/fl14.png" alt="Lights" style="width:100%" align="bottom">
-       </a>
      </div>
    </div>
 </div>
 <div class="row">
   <div class="col-md-12">
     <div class="thumbnail">
-      <a href="images/freelancing/fl15.png" target="_blank">
         <img src="images/freelancing/fl15.png" alt="Lights" style="width:100%" align="bottom">
-       </a>
      </div>
    </div>
 </div>
@@ -145,27 +143,21 @@
  <div class="row">
    <div class="col-md-12">
      <div class="thumbnail">
-       <a href="images/freelancing/fl3.png" target="_blank">
          <img src="images/freelancing/fl3.png" alt="Lights" style="width:100%" align="bottom">
-      </a>
     </div>
   </div>
 </div>
  <div class="row">
   <div class="col-md-12">
     <div class="thumbnail">
-      <a href="images/freelancing/fl4.png" target="_blank">
         <img src="images/freelancing/fl4.png" alt="Lights" style="width:100%" align="bottom">
-      </a>
     </div>
   </div>
 </div>
 <div class="row">
   <div class="col-md-12">
     <div class="thumbnail">
-      <a href="images/freelancing/fl5.png" target="_blank">
         <img src="images/freelancing/fl5.png" alt="Lights" style="width:100%" align="bottom">
-       </a>
      </div>
    </div>
 </div>
@@ -274,25 +266,19 @@ Here is what we are going to do over 6 weeks: </p>
 <div class="row">
   <div class="col-md-4">
     <div class="thumbnail">
-      <a href="images/freelancing/fl20.png" target="_blank">
-        <img src="images/freelancing/fl20.png" alt="Lights" style="width:100%" align="bottom">
-       </a>
+        <img src="images/freelancing/fl20.png" alt="Lights" style="width:100%;height: 250px;" align="bottom">
      </div>
      <p class="faqheader" style="text-decoration: underline;color: green;" align="center">Example 1:</p>
    </div>
     <div class="col-md-4">
     <div class="thumbnail">
-      <a href="images/freelancing/fl21.png" target="_blank">
-        <img src="images/freelancing/fl21.png" alt="Lights" style="width:100%" align="bottom">
-       </a>
+        <img src="images/freelancing/fl21.png" alt="Lights" style="width:100%;height: 250px;" align="bottom">
      </div>
      <p class="faqheader" style="text-decoration: underline;color: green;" align="center">Example 2:</p>
    </div>
     <div class="col-md-4">
     <div class="thumbnail">
-      <a href="images/freelancing/fl22.png" target="_blank">
-        <img src="images/freelancing/fl22.png" alt="Lights" style="width:100%" align="bottom">
-       </a>
+    <img src="images/freelancing/fl23.png" alt="Lights" style="width:100%;height: 250px;" align="bottom">
      </div>
      <p class="faqheader" style="text-decoration: underline;color: green;" align="center">Example 3:</p>
    </div>
@@ -300,17 +286,13 @@ Here is what we are going to do over 6 weeks: </p>
 <div class="row">
   <div class="col-md-4">
     <div class="thumbnail">
-      <a href="images/freelancing/fl23.png" target="_blank">
-        <img src="images/freelancing/fl23.png" alt="Lights" style="width:100%" align="bottom">
-       </a>
+	<img src="images/freelancing/fl22.png" alt="Lights" style="width:100%;height: 540px;" align="bottom">        
      </div>
      <p class="faqheader" style="text-decoration: underline;color: green;" align="center">Example 4:</p>
    </div>
     <div class="col-md-4">
     <div class="thumbnail">
-      <a href="images/freelancing/fl24.png" target="_blank">
-        <img src="images/freelancing/fl24.png" alt="Lights" style="width:100%" align="bottom">
-       </a>
+        <img src="images/freelancing/fl24.png" alt="Lights" style="width:100%;height: 540px;" align="bottom">
      </div>
      <p class="faqheader" style="text-decoration: underline;color: green;" align="center">Example 5:</p>
    </div>

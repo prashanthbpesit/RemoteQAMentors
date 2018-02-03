@@ -5,12 +5,17 @@
 <header id="fh5co-header" role="banner" >
 		<nav class="navbar navbar-default" role="navigation" >
 			<div class="container-fluid">
+			<div class="row">
+			<div class="col-md-1" align="center"></div>
+			<div class="col-md-2" align="center">
 				<div class="navbar-header"> 
 				<!-- Mobile Toggle Menu Button -->
 				<a class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#fh5co-navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
 				<a class="navbar-brand" href="#/"><img src="images/demo/backgrounds/logo123.jpg" alt="logo"  class="img-responsive img-rounded"/> 
 				</a>
 				</div>
+					</div>
+			<div class="col-md-8" align="left">
 				<div id="fh5co-navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-right">
 					<!-- <li><a href="#/home" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"><span class="headerclass">Home<span class="border"></span></span></a></li> -->
@@ -22,6 +27,7 @@
 					<li><a href="#/contactus" onclick="document.body.scrollTop = 0; document.documentElement.scrollTop = 0;"><span class="headerclass">Contact Us<span class="border"></span></span></a></li>
 					</ul>
 				</div>
+				</div></div>
 			</div>
 		</nav>
 	</header>
@@ -38,11 +44,11 @@
          <fieldset>
          <h3><i class="fa fa-envelope" style="color: rgb(68, 68, 68); font-size: 24px !important; margin-right: 6px;"><span class="aboutlinkcontentred"s> Request for a Demo</span></i></h3>
          <label style="color: blue; font-weight: bold; display: none;" id="divreqconfirmaton">{{ ConfirmationMessage }}</label>
-         <input class="btmspace-15" type="text" value="" name="firstname" id="firstname" ng-model="firstname" placeholder="First Name *" style="font-weight: bold;" required>
-         <input class="btmspace-15" type="text" name="lastname" id="lastname" value="" size="40" ng-model="lastname" placeholder="Last Name *" style="font-weight: bold;" required>
+         <input class="btmspace-15" type="text" value="" name="firstname" id="firstname" ng-model="firstname" placeholder="Name *" style="font-weight: bold;" required>
+         <!-- <input class="btmspace-15" type="text" name="lastname" id="lastname" value="" size="40" ng-model="lastname" placeholder="Last Name" style="font-weight: bold;" > -->
          <input class="btmspace-15" type="email" name="usermail" id="usermail" value="" ng-model="usermail" placeholder="Email*" style="font-weight: bold;" required>
-         <input class="btmspace-15" type="number" name="phonenumber" id="phonenumber" value="" ng-model="phone" placeholder="Phone No.*" style="font-weight: bold;" required>
-         <textarea class="btmspace-15" name="comment" id="comment" cols="25" rows="5" maxlength="2000" ng-model="usercomments" style="font-weight: bold;" placeholder="Your Comment" required></textarea>
+         <input class="btmspace-15" type="number" name="phonenumber" id="phonenumber" value="" ng-model="phone" placeholder="Number" style="font-weight: bold;" >
+         <textarea class="btmspace-15" name="comment" id="comment" cols="25" rows="5" maxlength="2000" ng-model="usercomments" style="font-weight: bold;" placeholder="Comments" ></textarea>
          <div align="left"> <input class="btmspace-15" type="submit" name="submit" value="Submit" style="color: #ffffff;background-color: #00ADEF;width: 100px;border-radius: 6px;"/>
          <input class="btmspace-15" type="reset" name="reset" value="Cancel" style="color: #ffffff;background-color: #00ADEF;width: 100px;border-radius: 6px;"/></div>
          </fieldset>

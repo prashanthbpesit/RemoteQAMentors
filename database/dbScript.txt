@@ -1,3 +1,5 @@
+sumithg_dbremoteqamentors
+
 create table tbluserdetails(
 flduserid int(11) not null auto_increment primary key,
 fldusername varchar(256) null,

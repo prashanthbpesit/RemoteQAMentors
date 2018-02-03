@@ -6,9 +6,14 @@
    <session-factory>
 <!--    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property> -->
    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-   <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/dbremoteqamentors</property>
+   <!-- <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/dbremoteqamentors</property>
    <property name="hibernate.connection.username">root</property>
-   <property name="hibernate.connection.password">root</property>
+   <property name="hibernate.connection.password">root</property> -->
+
+  <property name="hibernate.connection.url">jdbc:mysql://108.167.189.23:3306/sumithg_dbremoteqamentors</property>
+   <property name="hibernate.connection.username">sumithg</property>
+   <property name="hibernate.connection.password">gtcp?T1c6Fvm</property> 
+
    <property name="javax.persistence.validation.mode">none</property>
    <!-- JDBC connection pool (use the built-in) -->
 	<property name="hibernate.connection.pool_size">1</property>

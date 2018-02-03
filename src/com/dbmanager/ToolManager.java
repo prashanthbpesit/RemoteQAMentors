@@ -121,17 +121,16 @@ public class ToolManager {
 	 * @param inType
 	 * @return
 	 */
-	public Users commonUsers(String inUserName, String inPassword, String inEmail, String inPhone, String inFirstName,
-			String inLastName, int inType, int inPaid, String inUserComments) {
+	public Users commonUsers(String inEmail, String inPhone, String inFirstName,int inType, int inPaid, String inUserComments) {
 		Users users = new Users();
 		try {
 			users = new Users();
 			users.setFirstname(inFirstName);
-			users.setLastname(inLastName);
+			//users.setLastname(inLastName);
 			users.setEmail(inEmail);
 			users.setPhonenumber(inPhone);
-			users.setUsername(inUserName);
-			users.setPassword(inPassword);
+			//users.setUsername(inUserName);
+			//users.setPassword(inPassword);
 			users.setUsertype(inType);
 			users.setUsercomments(inUserComments);
 			users.setIsdeleted(0);
@@ -156,8 +155,7 @@ public class ToolManager {
 	 * @param inType
 	 * @return
 	 */
-	public String addUsers(String inUserName, String inPassword, String inEmail, String inPhone, String inFirstName,
-			String inLastName, int inType, String inUserComments) {
+	public String addUsers(String inEmail, String inPhone, String inFirstName, int inType, String inUserComments) {
 		String ReturnValue = "";
 		SessionFactory SessionFactory = null;
 		Session session = null;
@@ -171,24 +169,15 @@ public class ToolManager {
 			session = SessionFactory.openSession();
 			Val = new StringBuilder();
 			// Verify for the valid users
-			boolean isValid = commonUsersCheck(inUserName, inType, session);
+			//boolean isValid = commonUsersCheck(inUserName, inType, session);
 			// If the valid users
-
-			if (isValid) {
 				Tx = session.beginTransaction();
-				users = commonUsers(inUserName, inPassword, inEmail, inPhone, inFirstName, inLastName, inType, 0,
-						inUserComments);
+				users = commonUsers(inEmail, inPhone, inFirstName, inType, 0, inUserComments);
 				Integer UserId = (Integer) session.save(users);
 				users = null;
 				Tx.commit();
 				Val = new StringBuilder();
-				Val.append("Dear ").append(inFirstName).append(" ").append(inLastName)
-						.append(" enrolled successfully.");
-			} else {
-				Val = new StringBuilder();
-				Val.append("Dear ").append(inFirstName).append(" ").append(inLastName)
-						.append(", the User Name already exists, please enter other user name.");
-			}
+				Val.append("Dear ").append(inFirstName).append("thanks for enrolling to Freelancing course, we will contact you soon.");
 			ReturnValue = Val.toString();
 			Val = null;
 			Tx = null;
@@ -219,7 +208,7 @@ public class ToolManager {
 	 * @param ininUserComments
 	 * @return
 	 */
-	public String demoRequest(String inFirstName, String inLastName, String inEmail, String inPhone,
+	public String demoRequest(String inFirstName, String inEmail, String inPhone,
 			String ininUserComments) {
 		String ReturnValue = "";
 		SessionFactory SessionFactory = null;
@@ -233,14 +222,13 @@ public class ToolManager {
 			Tx = session.beginTransaction();
 			DemoRequest = new DemoRequest();
 			DemoRequest.setFirstname(inFirstName);
-			DemoRequest.setLastname(inLastName);
+			//DemoRequest.setLastname(inLastName);
 			DemoRequest.setEmail(inEmail);
 			DemoRequest.setPhonenumber(inPhone);
 			DemoRequest.setUsercomments(ininUserComments);
 			Integer UserId = (Integer) session.save(DemoRequest);
 			Val = new StringBuilder();
-			Val.append("Dear ").append(inFirstName).append(" ").append(inLastName)
-					.append(" thanks for requesting a demo, we will contact you soon.");
+			Val.append("Dear ").append(inFirstName).append(" thanks for requesting a demo, we will contact you soon.");
 			ReturnValue = Val.toString();
 			Val = null;
 			DemoRequest = null;
